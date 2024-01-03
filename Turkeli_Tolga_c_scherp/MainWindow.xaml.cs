@@ -22,6 +22,9 @@ namespace Turkeli_Tolga_c_scherp
     public partial class MainWindow : Window
     {
 
+        //timer
+        private int aantalSeconden = 0;
+
         private DispatcherTimer timerUpdateClicks;
 
         double clicks1 = 100000; //clicks
@@ -72,6 +75,12 @@ namespace Turkeli_Tolga_c_scherp
         public MainWindow()
         {
             InitializeComponent();
+
+            DispatcherTimer timerInvestering = new DispatcherTimer();
+            timerInvestering.Interval = TimeSpan.FromSeconds(1);
+            timerInvestering.Tick += TimerInvestering_Tick;
+            timerInvestering.Start();
+
             DispatcherTimer TimerUpdateScherm = new DispatcherTimer();
             TimerUpdateScherm.Interval = TimeSpan.FromMilliseconds(10);
             TimerUpdateScherm.Tick += TimerUpdateScherm_Tick;
@@ -140,7 +149,6 @@ namespace Turkeli_Tolga_c_scherp
                 MessageBox.Show("You dont have enough clicks!");
             }
 
-            lblAantalGespendeerd.Content = $"Clicks spent: " + (Math.Ceiling(clicks1));
         }
 
         private void Upgrade1_Click(object sender, RoutedEventArgs e)
@@ -171,5 +179,78 @@ namespace Turkeli_Tolga_c_scherp
         {
             Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen);
         }
+
+        private double UpgradeVermenigvuldiger(int levelUpgrade)
+        {
+
+            double vermenigvuldiger = 1;
+            switch (levelUpgrade)
+            {
+                case 1:
+                    vermenigvuldiger = 1;
+                    break;
+                case 2:
+                    vermenigvuldiger = 1.5;
+                    break;
+                case 3:
+                    vermenigvuldiger = 2;
+                    break;
+                case 4:
+                    vermenigvuldiger = 2.5;
+                    break;
+                case 5:
+                    vermenigvuldiger = 12.5;
+                    break;
+            }
+            return vermenigvuldiger;
+        }
+
+        private void UpgradePassiefInkomen(double upgradeInkomen, int levelUpgrade)
+        {
+            double vermenigvuldiger = UpgradeVermenigvuldiger(levelUpgrade);
+            passiefinkomen += upgradeInkomen * vermenigvuldiger;
+
+            if (aantalSeconden % 1 == 0)
+            {
+                clicks1 += upgradeInkomen * vermenigvuldiger;
+                totaalClicksAlles += upgradeInkomen * vermenigvuldiger;
+            }
+        }
+
+        private void TimerInvestering_Tick(object sender, EventArgs e)
+        {
+            aantalSeconden++;
+            passiefinkomen = 0; //reset passief inkomen
+            if (upgrade1Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade1Inkomen, levelUpgrade1);
+            }
+            if (upgrade2Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade2Inkomen, levelUpgrade2);
+            }
+            if (upgrade3Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade3Inkomen, levelUpgrade3);
+            }
+            if (upgrade4Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade4Inkomen, levelUpgrade4);
+            }
+            if (upgrade5Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade5Inkomen, levelUpgrade5);
+            }
+            if (upgrade6Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade6Inkomen, levelUpgrade6);
+            }
+            if (upgrade7Gekocht)
+            {
+                UpgradePassiefInkomen(Upgrade7Inkomen, levelUpgrade7);
+            }
+            lblPassiefInkomen.Content = "Passive income: " + passiefinkomen + "/s";
+        }
+
     }
 }
