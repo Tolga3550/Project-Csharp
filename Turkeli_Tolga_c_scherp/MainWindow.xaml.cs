@@ -456,5 +456,49 @@ namespace Turkeli_Tolga_c_scherp
                 }
             }
         }
+
+        //met hulp van internet heb ik sounds in mijn programma kunnen zetten
+        private void PlayUpgradeSound()
+        {
+            try //probeert geluid af te spelen, in dit geval carRev.wav
+            {
+                var soundPath = System.IO.Path.Combine("sounds", "carRev.wav");
+                var soundPlayer = new System.Media.SoundPlayer(soundPath); //pad vh geluidsbestand wordt gebruikt om soundplayer in te stellen
+                soundPlayer.Play(); // laat het geluid afspelen
+            }
+            catch (Exception ex) //foutmelding
+            {
+                MessageBox.Show($"Error playing sound: {ex.Message}");
+            }
+        }
+        private void PlayHappySound()
+        {
+            try
+            {
+                var soundPath = System.IO.Path.Combine("sounds", "congratsSound.wav");
+                var soundPlayer = new System.Media.SoundPlayer(soundPath);
+                soundPlayer.Play();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error playing sound: {ex.Message}");
+            }
+        }
+        private void PlaySadSound()
+        {
+            try
+            {
+                var soundPath = System.IO.Path.Combine("sounds", "sadSound.wav");
+                var soundPlayer = new System.Media.SoundPlayer(soundPath);
+                soundPlayer.Play();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error playing sound: {ex.Message}");
+            }
+
+        }
     }
 }
+
+
