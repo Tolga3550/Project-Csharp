@@ -93,7 +93,7 @@ namespace Turkeli_Tolga_c_scherp
         {
 
             lblTijd.Content = $"Tijd: " + DateTime.Now.ToString("HH:mm:ss");
-            lblClicks.Content = $"Clicks: " + (Math.Floor(clicks1));
+            lblClicks.Content = $"Clicks: {VeranderGroteNummer(Math.Floor(clicks1))}";
 
             UpdateWindowTitle();
 
@@ -130,7 +130,7 @@ namespace Turkeli_Tolga_c_scherp
         }
 
 
-        private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen)
+        private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen, TextBlock tbUpgrade)
         {
             if (upgradePrijs <= clicks1)
             {
@@ -163,35 +163,37 @@ namespace Turkeli_Tolga_c_scherp
             }
             lblAantalGespendeerd.Content = "Clicks:" + (Math.Floor(totaalGespendeerd));
 
+            //dit is voor de ToolTip
+            tbUpgrade.Text = GeneratePassiefInkomenApart(UpgradeInkomen, levelUpgrade);
         }
 
         private void Upgrade1_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen);
+            Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen, tbUpgrade1);
         }
         private void Upgrade2_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade2Prijs, ref levelUpgrade2, ref upgrade2Gekocht, lblPrijs2, upgrade2, lblUpgradeCount2, ref Upgrade2Inkomen);
+            Upgrade_Click(ref upgrade2Prijs, ref levelUpgrade2, ref upgrade2Gekocht, lblPrijs2, upgrade2, lblUpgradeCount2, ref Upgrade2Inkomen, tbUpgrade2);
         }
         private void Upgrade3_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade3Prijs, ref levelUpgrade3, ref upgrade3Gekocht, lblPrijs3, upgrade3, lblUpgradeCount3, ref Upgrade3Inkomen);
+            Upgrade_Click(ref upgrade3Prijs, ref levelUpgrade3, ref upgrade3Gekocht, lblPrijs3, upgrade3, lblUpgradeCount3, ref Upgrade3Inkomen, tbUpgrade3);
         }
         private void Upgrade4_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen);
+            Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen, tbUpgrade4);
         }
         private void Upgrade5_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen);
+            Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen, tbUpgrade5);
         }
         private void Upgrade6_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade6Prijs, ref levelUpgrade6, ref upgrade6Gekocht, lblPrijs6, upgrade6, lblUpgradeCount6, ref Upgrade6Inkomen);
+            Upgrade_Click(ref upgrade6Prijs, ref levelUpgrade6, ref upgrade6Gekocht, lblPrijs6, upgrade6, lblUpgradeCount6, ref Upgrade6Inkomen, tbUpgrade6);
         }
         private void Upgrade7_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen);
+            Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen, tbUpgrade7);
         }
 
         private double UpgradeVermenigvuldiger(int levelUpgrade)
@@ -266,6 +268,17 @@ namespace Turkeli_Tolga_c_scherp
             lblPassiefInkomen.Content = "Passive income: " + passiefinkomen + "/s";
         }
 
+        private string GeneratePassiefInkomenApart(double UpgradeInkomen, int levelUpgrade)
+        {
+            double passiefInkomen = 0;
+
+            double vermenigvuldiger = UpgradeVermenigvuldiger(levelUpgrade);
+            passiefInkomen = UpgradeInkomen * vermenigvuldiger;
+
+            return $"Passief inkomen: {VeranderGroteNummer(passiefInkomen)} /s";
+
+        }
+
         private void UpdateIsEnabled(Button upgradeButton, double upgradePrijs, double levelUpgrade)
         {
             if (levelUpgrade == 0)
@@ -314,5 +327,7 @@ namespace Turkeli_Tolga_c_scherp
 
             return $"{HonderdduizendTallen}";
         }
+
+
     }
 }
