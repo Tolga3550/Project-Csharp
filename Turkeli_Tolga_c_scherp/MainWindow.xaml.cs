@@ -25,7 +25,7 @@ namespace Turkeli_Tolga_c_scherp
         //timer
         private int aantalSeconden = 0;
 
-        private DispatcherTimer timerUpdateClicks;
+        private DispatcherTimer timerUpdateScherm;
 
         double clicks1 = 100000; //clicks
         double totaalClicksAlles = 1000000000;
@@ -113,7 +113,7 @@ namespace Turkeli_Tolga_c_scherp
             totaalClicksAlles++;
             GrootteFoto(0.95);
             verkleinen = true;
-
+            UpdateInvestmentButtonVisibility();
         }
 
         private void AutoClicker_MouseUp(object sender, MouseButtonEventArgs e)
@@ -165,6 +165,8 @@ namespace Turkeli_Tolga_c_scherp
 
             //dit is voor de ToolTip
             tbUpgrade.Text = GeneratePassiefInkomenApart(UpgradeInkomen, levelUpgrade);
+
+            UnlockedVisibility();
         }
 
         private void Upgrade1_Click(object sender, RoutedEventArgs e)
@@ -328,6 +330,89 @@ namespace Turkeli_Tolga_c_scherp
             return $"{HonderdduizendTallen}";
         }
 
+        private void ChangeUpgradeText(Image pictureUnlocked, Image pictureUpgrade, Label lblUpgrade, Label lblPrijs, Label lblUpgradeCount, Image pictureSCRLVW, Image pictureIcon)
+        {
 
+            //hier heb ik een functie gemaakt voor visuele veranderingen zodat het mooi oogt.
+            pictureUnlocked.Visibility = Visibility.Visible;
+            pictureSCRLVW.Visibility = Visibility.Visible;
+            pictureUpgrade.Opacity = 0.8;
+            lblUpgrade.Foreground = Brushes.Black;
+            lblUpgrade.FontWeight = FontWeights.Bold;
+            lblPrijs.Foreground = Brushes.Yellow;
+            lblPrijs.FontWeight = FontWeights.Bold;
+            lblUpgradeCount.Foreground = Brushes.White;
+            lblUpgradeCount.FontWeight = FontWeights.Bold;
+            lblPrijs.BorderBrush = Brushes.Blue;
+            lblPrijs.BorderThickness = new Thickness(2);
+            pictureIcon.Opacity = 1;
+        }
+
+        private void UnlockedVisibility()
+        {
+            //ik heb een gesloten en een open slot, als upgrade1Gekocht is gaat de picturelocked verdwijnen en komt er een nieuwe image..
+            if (upgrade1Gekocht)
+            {
+                pictureLocked1.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked1, pictureUpgrade1, lblUpgrade1, lblPrijs1, lblUpgradeCount1, pictureSCRLVW1, icon1Upgrade);
+
+            }
+            if (upgrade2Gekocht)
+            {
+                pictureLocked2.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked2, pictureUpgrade2, lblUpgrade2, lblPrijs2, lblUpgradeCount2, pictureSCRLVW2, icon2Upgrade);
+
+            }
+            if (upgrade3Gekocht)
+            {
+                pictureLocked3.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked3, pictureUpgrade3, lblUpgrade3, lblPrijs3, lblUpgradeCount3, pictureSCRLVW3, icon3Upgrade);
+
+            }
+            if (upgrade4Gekocht)
+            {
+                pictureLocked4.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked4, pictureUpgrade4, lblUpgrade4, lblPrijs4, lblUpgradeCount4, pictureSCRLVW4, icon4Upgrade);
+            }
+            if (upgrade5Gekocht)
+            {
+                pictureLocked5.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked5, pictureUpgrade5, lblUpgrade5, lblPrijs5, lblUpgradeCount5, pictureSCRLVW5, icon5Upgrade);
+
+            }
+            if (upgrade6Gekocht)
+            {
+                pictureLocked6.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked6, pictureUpgrade6, lblUpgrade6, lblPrijs6, lblUpgradeCount6, pictureSCRLVW6, icon6Upgrade);
+
+
+            }
+            if (upgrade7Gekocht)
+            {
+                pictureLocked7.Visibility = Visibility.Collapsed;
+                ChangeUpgradeText(pictureUnlocked7, pictureUpgrade7, lblUpgrade7, lblPrijs7, lblUpgradeCount7, pictureSCRLVW7, icon7Upgrade);
+
+            }
+        }
+
+        //zichtbaarheid van de investeringen gebeurd als de upgradeprijs  gelijk of groter dan de TOTAAL aantal clicks is dus clicks + passief inkomst zonder geld die je besteed aan de upgrades.
+        private void TotaalClicksUnlockedUpgrade(Button upgrade, double totaalClicksAlles, double upgradePrijs)
+        {
+            if (upgradePrijs <= totaalClicksAlles)
+            {
+                upgrade.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void UpdateInvestmentButtonVisibility()
+        {
+            TotaalClicksUnlockedUpgrade(upgrade1, totaalClicksAlles, upgrade1Prijs);
+            TotaalClicksUnlockedUpgrade(upgrade2, totaalClicksAlles, upgrade2Prijs);
+            TotaalClicksUnlockedUpgrade(upgrade3, totaalClicksAlles, upgrade3Prijs);
+            TotaalClicksUnlockedUpgrade(upgrade4, totaalClicksAlles, upgrade4Prijs);
+            TotaalClicksUnlockedUpgrade(upgrade5, totaalClicksAlles, upgrade5Prijs);
+            TotaalClicksUnlockedUpgrade(upgrade6, totaalClicksAlles, upgrade6Prijs);
+            TotaalClicksUnlockedUpgrade(upgrade7, totaalClicksAlles, upgrade7Prijs);
+        }
     }
 }
