@@ -114,6 +114,26 @@ namespace Turkeli_Tolga_c_scherp
             GrootteFoto(0.95);
             verkleinen = true;
             UpdateInvestmentButtonVisibility();
+
+            //veranderen van auto image, als je bepaald aantal clicks hebt word de image veranderd.
+
+            if (clicks1 == 100000)
+            {
+                AutoClicker.Source = new BitmapImage(new Uri("Image/100kClicksAuto.png", UriKind.Relative));
+                MessageBox.Show("Congrats! You unlocked a new car!");
+            }
+            if (clicks1 == 1000000)
+            {
+                AutoClicker.Source = new BitmapImage(new Uri("Image/1milClicksAuto.png", UriKind.Relative));
+                AutoClicker.Margin = new Thickness(0, 150, 0, 0);
+                MessageBox.Show("Congrats! You unlocked a new car!");
+            }
+            if (clicks1 == 1000000000)
+            {
+                AutoClicker.Source = new BitmapImage(new Uri("Image/1miljardClicksAuto.png", UriKind.Relative));
+                MessageBox.Show("Congrats! You unlocked the game creators favourite car!");
+                AutoClicker.Margin = new Thickness(0, 200, 0, 0);
+            }
         }
 
         private void AutoClicker_MouseUp(object sender, MouseButtonEventArgs e)
