@@ -95,6 +95,8 @@ namespace Turkeli_Tolga_c_scherp
             lblTijd.Content = $"Tijd: " + DateTime.Now.ToString("HH:mm:ss");
             lblClicks.Content = $"Clicks: " + (Math.Floor(clicks1));
 
+            UpdateWindowTitle();
+
             UpdateIsEnabled(upgrade1, upgrade1Prijs, levelUpgrade1);
             UpdateIsEnabled(upgrade2, upgrade2Prijs, levelUpgrade2);
             UpdateIsEnabled(upgrade3, upgrade3Prijs, levelUpgrade3);
@@ -278,6 +280,39 @@ namespace Turkeli_Tolga_c_scherp
             {
                 upgradeButton.IsEnabled = true;
             }
+        }
+
+        private void UpdateWindowTitle() // voor titel van de applicatie
+        {
+            string cookieScore = VeranderGroteNummer(clicks1);
+
+            this.Title = $"Auto Clicker - Score: {cookieScore}";
+        }
+
+        private string VeranderGroteNummer(double VeranderdeNummer)
+        {
+            if (VeranderdeNummer >= 1000000000)
+            {
+                double VeranderNum = VeranderdeNummer / 1000000000.0;
+                return $"{VeranderNum:N3} Billion";
+            }
+            else if (VeranderdeNummer >= 1000000)
+            {
+                double VeranderNum = VeranderdeNummer / 1000000.0;
+                return $"{VeranderNum:N3} Million";
+            }
+
+            string HonderdduizendTallen;
+            if (VeranderdeNummer >= 1000)
+            {
+                HonderdduizendTallen = VeranderdeNummer.ToString("### ###");
+            }
+            else
+            {
+                HonderdduizendTallen = $"{VeranderdeNummer:F2}";
+            }
+
+            return $"{HonderdduizendTallen}";
         }
     }
 }
