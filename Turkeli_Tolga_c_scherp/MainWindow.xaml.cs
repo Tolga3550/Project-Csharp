@@ -39,6 +39,7 @@ namespace Turkeli_Tolga_c_scherp
         private bool upgrade7Gekocht = false;
 
         double passiefinkomen = 0;
+        double totaalGespendeerd = 0;
 
         double upgrade1Prijs = 15;
         double upgrade2Prijs = 100;
@@ -85,6 +86,7 @@ namespace Turkeli_Tolga_c_scherp
             TimerUpdateScherm.Interval = TimeSpan.FromMilliseconds(10);
             TimerUpdateScherm.Tick += TimerUpdateScherm_Tick;
             TimerUpdateScherm.Start();
+
         }
 
         private void TimerUpdateScherm_Tick(object sender, EventArgs e)
@@ -92,6 +94,14 @@ namespace Turkeli_Tolga_c_scherp
 
             lblTijd.Content = $"Tijd: " + DateTime.Now.ToString("HH:mm:ss");
             lblClicks.Content = $"Clicks: " + (Math.Floor(clicks1));
+
+            UpdateIsEnabled(upgrade1, upgrade1Prijs, levelUpgrade1);
+            UpdateIsEnabled(upgrade2, upgrade2Prijs, levelUpgrade2);
+            UpdateIsEnabled(upgrade3, upgrade3Prijs, levelUpgrade3);
+            UpdateIsEnabled(upgrade4, upgrade4Prijs, levelUpgrade4);
+            UpdateIsEnabled(upgrade5, upgrade5Prijs, levelUpgrade5);
+            UpdateIsEnabled(upgrade6, upgrade6Prijs, levelUpgrade6);
+            UpdateIsEnabled(upgrade7, upgrade7Prijs, levelUpgrade7);
         }
 
         private void AutoClicker_MouseDown(object sender, MouseButtonEventArgs e)
@@ -122,6 +132,7 @@ namespace Turkeli_Tolga_c_scherp
         {
             if (upgradePrijs <= clicks1)
             {
+                totaalGespendeerd += upgradePrijs;
 
                 if (levelUpgrade <= 4) // maximum 5 levels per upgrade
                 {
@@ -148,6 +159,7 @@ namespace Turkeli_Tolga_c_scherp
             {
                 MessageBox.Show("You dont have enough clicks!");
             }
+            lblAantalGespendeerd.Content = "Clicks:" + (Math.Floor(totaalGespendeerd));
 
         }
 
@@ -252,5 +264,20 @@ namespace Turkeli_Tolga_c_scherp
             lblPassiefInkomen.Content = "Passive income: " + passiefinkomen + "/s";
         }
 
+        private void UpdateIsEnabled(Button upgradeButton, double upgradePrijs, double levelUpgrade)
+        {
+            if (levelUpgrade == 0)
+            {
+                upgradeButton.IsEnabled = clicks1 >= upgradePrijs;
+            }
+            else
+            {
+                upgradeButton.IsEnabled = false;
+            }
+            if (levelUpgrade >= 1)
+            {
+                upgradeButton.IsEnabled = true;
+            }
+        }
     }
 }
