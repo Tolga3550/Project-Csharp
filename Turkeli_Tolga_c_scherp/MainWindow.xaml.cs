@@ -35,7 +35,7 @@ namespace Turkeli_Tolga_c_scherp
         private int aantalSeconden = 0;
 
         //clicks
-        double clicks1 = 100000; 
+        double clicks1 = 10000000000; 
         double totaalClicksAlles = 1000000000;
 
         //upgrades
@@ -46,6 +46,15 @@ namespace Turkeli_Tolga_c_scherp
         private bool upgrade5Gekocht = false;
         private bool upgrade6Gekocht = false;
         private bool upgrade7Gekocht = false;
+
+        private bool geluid1VoorLevel5 = false;
+        private bool geluid2VoorLevel5 = false;
+        private bool geluid3VoorLevel5 = false;
+        private bool geluid4VoorLevel5 = false;
+        private bool geluid5VoorLevel5 = false;
+        private bool geluid6VoorLevel5 = false;
+        private bool geluid7VoorLevel5 = false;
+        private bool geluid8VoorLevel5 = false;
 
         double passiefinkomen = 0;
         double totaalGespendeerd = 0;
@@ -177,7 +186,7 @@ namespace Turkeli_Tolga_c_scherp
         /// <param name="pictureIconLevel3">icon voor als je level 3 van de upgrade bent, verschijnt in het midden v/d venster</param>
         /// <param name="pictureIconLevel4">icon voor als je level 4 van de upgrade bent, verschijnt in het midden v/d venster</param>
         /// <param name="pictureIconLevel5">icon voor als je level 5 van de upgrade bent, verschijnt in het midden v/d venster</param>
-        private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen, TextBlock tbUpgrade, Image pictureIcon, Image pictureIconLevel2, Image pictureIconLevel3, Image pictureIconLevel4, Image pictureIconLevel5)
+        private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen, TextBlock tbUpgrade, Image pictureIcon, Image pictureIconLevel2, Image pictureIconLevel3, Image pictureIconLevel4, Image pictureIconLevel5, ref bool geluidVoorLevel5)
         {
             if (upgradePrijs <= clicks1)
             {
@@ -231,8 +240,12 @@ namespace Turkeli_Tolga_c_scherp
             if (levelUpgrade == 5)
             {
                 pictureIconLevel5.Visibility = Visibility.Visible;
-                MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get 5x more passive income from this upgrade!", "A little gift :)");
+            }
+            if (levelUpgrade == 5 && !geluidVoorLevel5)
+            {
                 PlayHappySound();
+                MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get 5x more passive income from this upgrade!", "A little gift :)");
+                geluidVoorLevel5 = true;
             }
 
             //dit is voor de ToolTip
@@ -243,31 +256,31 @@ namespace Turkeli_Tolga_c_scherp
 
         private void Upgrade1_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen, tbUpgrade1, pictureIcon1, pictureIcon1Level2, pictureIcon1Level3, pictureIcon1Level4, pictureIcon1Level5);
+            Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen, tbUpgrade1, pictureIcon1, pictureIcon1Level2, pictureIcon1Level3, pictureIcon1Level4, pictureIcon1Level5, ref geluid1VoorLevel5);
         }
         private void Upgrade2_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade2Prijs, ref levelUpgrade2, ref upgrade2Gekocht, lblPrijs2, upgrade2, lblUpgradeCount2, ref Upgrade2Inkomen, tbUpgrade2, pictureIcon2, pictureIcon2Level2, pictureIcon2Level3, pictureIcon2Level4, pictureIcon2Level5);
+            Upgrade_Click(ref upgrade2Prijs, ref levelUpgrade2, ref upgrade2Gekocht, lblPrijs2, upgrade2, lblUpgradeCount2, ref Upgrade2Inkomen, tbUpgrade2, pictureIcon2, pictureIcon2Level2, pictureIcon2Level3, pictureIcon2Level4, pictureIcon2Level5, ref geluid2VoorLevel5);
         }
         private void Upgrade3_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade3Prijs, ref levelUpgrade3, ref upgrade3Gekocht, lblPrijs3, upgrade3, lblUpgradeCount3, ref Upgrade3Inkomen, tbUpgrade3, pictureIcon3, pictureIcon3Level2, pictureIcon3Level3, pictureIcon3Level4, pictureIcon3Level5);
+            Upgrade_Click(ref upgrade3Prijs, ref levelUpgrade3, ref upgrade3Gekocht, lblPrijs3, upgrade3, lblUpgradeCount3, ref Upgrade3Inkomen, tbUpgrade3, pictureIcon3, pictureIcon3Level2, pictureIcon3Level3, pictureIcon3Level4, pictureIcon3Level5, ref geluid3VoorLevel5);
         }
         private void Upgrade4_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen, tbUpgrade4, pictureIcon4, pictureIcon4Level2, pictureIcon4Level3, pictureIcon4Level4, pictureIcon4Level5);
+            Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen, tbUpgrade4, pictureIcon4, pictureIcon4Level2, pictureIcon4Level3, pictureIcon4Level4, pictureIcon4Level5, ref geluid4VoorLevel5);
         }
         private void Upgrade5_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen, tbUpgrade5, pictureIcon5, pictureIcon5Level2, pictureIcon5Level3, pictureIcon5Level4, pictureIcon5Level5);
+            Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen, tbUpgrade5, pictureIcon5, pictureIcon5Level2, pictureIcon5Level3, pictureIcon5Level4, pictureIcon5Level5, ref geluid5VoorLevel5);
         }
         private void Upgrade6_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade6Prijs, ref levelUpgrade6, ref upgrade6Gekocht, lblPrijs6, upgrade6, lblUpgradeCount6, ref Upgrade6Inkomen, tbUpgrade6, pictureIcon6, pictureIcon6Level2, pictureIcon6Level3, pictureIcon6Level4, pictureIcon6Level5);
+            Upgrade_Click(ref upgrade6Prijs, ref levelUpgrade6, ref upgrade6Gekocht, lblPrijs6, upgrade6, lblUpgradeCount6, ref Upgrade6Inkomen, tbUpgrade6, pictureIcon6, pictureIcon6Level2, pictureIcon6Level3, pictureIcon6Level4, pictureIcon6Level5, ref geluid6VoorLevel5);
         }
         private void Upgrade7_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen, tbUpgrade7, pictureIcon7, pictureIcon7Level2, pictureIcon7Level3, pictureIcon7Level4, pictureIcon7Level5);
+            Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen, tbUpgrade7, pictureIcon7, pictureIcon7Level2, pictureIcon7Level3, pictureIcon7Level4, pictureIcon7Level5, ref geluid7VoorLevel5);
         }
 
         /// <summary>
@@ -478,7 +491,6 @@ namespace Turkeli_Tolga_c_scherp
             {
                 pictureLocked7.Visibility = Visibility.Collapsed;
                 ChangeUpgradeText(pictureUnlocked7, pictureUpgrade7, lblUpgrade7, lblPrijs7, lblUpgradeCount7, pictureSCRLVW7, icon7Upgrade);
-
             }
         }
 
