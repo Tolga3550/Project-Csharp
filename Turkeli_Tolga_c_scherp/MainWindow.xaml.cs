@@ -130,7 +130,7 @@ namespace Turkeli_Tolga_c_scherp
         }
 
 
-        private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen, TextBlock tbUpgrade)
+        private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen, TextBlock tbUpgrade, Image pictureIcon, Image pictureIconLevel2, Image pictureIconLevel3, Image pictureIconLevel4, Image pictureIconLevel5)
         {
             if (upgradePrijs <= clicks1)
             {
@@ -163,6 +163,30 @@ namespace Turkeli_Tolga_c_scherp
             }
             lblAantalGespendeerd.Content = "Clicks:" + (Math.Floor(totaalGespendeerd));
 
+            // dit is voor de icoontjes in het midden vd scherm visible te maken
+            if (levelUpgrade == 1)
+            {
+                pictureIcon.Visibility = Visibility.Visible;
+            }
+            if (levelUpgrade == 2)
+            {
+                pictureIconLevel2.Visibility = Visibility.Visible;
+            }
+            if (levelUpgrade == 3)
+            {
+                pictureIconLevel3.Visibility = Visibility.Visible;
+            }
+            if (levelUpgrade == 4)
+            {
+                pictureIconLevel4.Visibility = Visibility.Visible;
+            }
+            if (levelUpgrade == 5)
+            {
+                pictureIconLevel5.Visibility = Visibility.Visible;
+                MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get 5x more passive income from this upgrade!", "A little gift :)");
+                PlayHappySound();
+            }
+
             //dit is voor de ToolTip
             tbUpgrade.Text = GeneratePassiefInkomenApart(UpgradeInkomen, levelUpgrade);
 
@@ -171,31 +195,31 @@ namespace Turkeli_Tolga_c_scherp
 
         private void Upgrade1_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen, tbUpgrade1);
+            Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen, tbUpgrade1, pictureIcon1, pictureIcon1Level2, pictureIcon1Level3, pictureIcon1Level4, pictureIcon1Level5);
         }
         private void Upgrade2_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade2Prijs, ref levelUpgrade2, ref upgrade2Gekocht, lblPrijs2, upgrade2, lblUpgradeCount2, ref Upgrade2Inkomen, tbUpgrade2);
+            Upgrade_Click(ref upgrade2Prijs, ref levelUpgrade2, ref upgrade2Gekocht, lblPrijs2, upgrade2, lblUpgradeCount2, ref Upgrade2Inkomen, tbUpgrade2, pictureIcon2, pictureIcon2Level2, pictureIcon2Level3, pictureIcon2Level4, pictureIcon2Level5);
         }
         private void Upgrade3_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade3Prijs, ref levelUpgrade3, ref upgrade3Gekocht, lblPrijs3, upgrade3, lblUpgradeCount3, ref Upgrade3Inkomen, tbUpgrade3);
+            Upgrade_Click(ref upgrade3Prijs, ref levelUpgrade3, ref upgrade3Gekocht, lblPrijs3, upgrade3, lblUpgradeCount3, ref Upgrade3Inkomen, tbUpgrade3, pictureIcon3, pictureIcon3Level2, pictureIcon3Level3, pictureIcon3Level4, pictureIcon3Level5);
         }
         private void Upgrade4_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen, tbUpgrade4);
+            Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen, tbUpgrade4, pictureIcon4, pictureIcon4Level2, pictureIcon4Level3, pictureIcon4Level4, pictureIcon4Level5);
         }
         private void Upgrade5_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen, tbUpgrade5);
+            Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen, tbUpgrade5, pictureIcon5, pictureIcon5Level2, pictureIcon5Level3, pictureIcon5Level4, pictureIcon5Level5);
         }
         private void Upgrade6_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade6Prijs, ref levelUpgrade6, ref upgrade6Gekocht, lblPrijs6, upgrade6, lblUpgradeCount6, ref Upgrade6Inkomen, tbUpgrade6);
+            Upgrade_Click(ref upgrade6Prijs, ref levelUpgrade6, ref upgrade6Gekocht, lblPrijs6, upgrade6, lblUpgradeCount6, ref Upgrade6Inkomen, tbUpgrade6, pictureIcon6, pictureIcon6Level2, pictureIcon6Level3, pictureIcon6Level4, pictureIcon6Level5);
         }
         private void Upgrade7_Click(object sender, RoutedEventArgs e)
         {
-            Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen, tbUpgrade7);
+            Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen, tbUpgrade7, pictureIcon7, pictureIcon7Level2, pictureIcon7Level3, pictureIcon7Level4, pictureIcon7Level5);
         }
 
         private double UpgradeVermenigvuldiger(int levelUpgrade)
@@ -350,7 +374,7 @@ namespace Turkeli_Tolga_c_scherp
 
         private void UnlockedVisibility()
         {
-            //ik heb een gesloten en een open slot, als upgrade1Gekocht is gaat de picturelocked verdwijnen en komt er een nieuwe image..
+            //ik heb een gesloten en een open slot, als upgrade1Gekocht is gaat de picturelocked verdwijnen en komt er een nieuwe image, picture van upgrade1 gaat naar scrollview ETC.
             if (upgrade1Gekocht)
             {
                 pictureLocked1.Visibility = Visibility.Collapsed;
