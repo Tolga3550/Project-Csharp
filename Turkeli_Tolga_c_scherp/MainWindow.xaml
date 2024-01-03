@@ -178,7 +178,7 @@
         </Button>
 
 
-        <TextBox x:Name="txtGarageNaam" Grid.Row="0" Grid.Column="1" Text="PXL-TuningShop" Background="#FF2559AD" Width="Auto" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="txtGarageNaam" Grid.Row="0" Grid.Column="1" Text="PXL-TuningShop" Background="#FF2559AD" Width="Auto" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" KeyDown="TxtGarageNaam_KeyDown"/>
         <Label x:Name="lblClicks" Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" Background="#FF2559AD" Content="" VerticalContentAlignment="Center" FontSize="14"/>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" Height="Auto" Grid.Row="2" Grid.RowSpan="7" Grid.Column="1">

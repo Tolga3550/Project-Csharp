@@ -184,7 +184,6 @@ namespace Turkeli_Tolga_c_scherp
             {
                 pictureIconLevel5.Visibility = Visibility.Visible;
                 MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get 5x more passive income from this upgrade!", "A little gift :)");
-                PlayHappySound();
             }
 
             //dit is voor de ToolTip
@@ -437,6 +436,25 @@ namespace Turkeli_Tolga_c_scherp
             TotaalClicksUnlockedUpgrade(upgrade5, totaalClicksAlles, upgrade5Prijs);
             TotaalClicksUnlockedUpgrade(upgrade6, totaalClicksAlles, upgrade6Prijs);
             TotaalClicksUnlockedUpgrade(upgrade7, totaalClicksAlles, upgrade7Prijs);
+        }
+
+        private void TxtGarageNaam_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string newName = txtGarageNaam.Text.Trim();
+
+                if (!string.IsNullOrWhiteSpace(newName)) // controleert dat de string newName NIET null is
+                {
+                    txtGarageNaam.Text = newName;
+                    upgrade1.Focus(); //omdat er een cursor was in de txtbox die heletijd aan en uit flikkerde heb ik de focus veranderd naar een random btn
+                    MessageBox.Show("Are you sure?", "Congrats with ur new name!", MessageBoxButton.YesNo);
+                }
+                else
+                {
+                    MessageBox.Show("Please choose ur name!");
+                }
+            }
         }
     }
 }
