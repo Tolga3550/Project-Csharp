@@ -38,14 +38,14 @@
 
         <Label Content="Mod Shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="#FF2559AD" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-        <Button x:Name="upgrade1" Grid.Row="1" Height="Auto" Click="Upgrade1_Click" Width="Auto" Visibility="Collapsed">
+        <Button x:Name="upgrade1" Grid.Row="1" Height="Auto" Click="Upgrade1_Click" Width="Auto" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade1" Source="image/newupgrade1.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"/>
                 <Label x:Name="lblUpgrade1" Content="Speed Racer" HorizontalAlignment="Center"/>
                 <Label x:Name="lblPrijs1" Content="&#xA;Price: 15" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount1" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked1" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked1" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked1" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked1" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon1Upgrade" Source="image/icon1.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -58,14 +58,14 @@
         </Button>
 
 
-        <Button x:Name="upgrade2" Grid.Row="2" Height="Auto" Click="Upgrade2_Click" Width="Auto" Visibility="Collapsed">
+        <Button x:Name="upgrade2" Grid.Row="2" Height="Auto" Click="Upgrade2_Click" Width="Auto" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade2" Source="image/upgrade2.jpg" Opacity="0.5" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade2" Content="Turbo Boost"  HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs2" Content="&#xA;Price: 100" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount2" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked2" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked2" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked2" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked2" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon2Upgrade" Source="image/icon2.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -78,14 +78,14 @@
         </Button>
 
 
-        <Button x:Name="upgrade3" Grid.Row="3" Height="Auto" Width="Auto" Click="Upgrade3_Click" Visibility="Collapsed">
+        <Button x:Name="upgrade3" Grid.Row="3" Height="Auto" Width="Auto" Click="Upgrade3_Click" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade3" Source="image/newupgrade3.png" Opacity="0.5" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade3" Content="Aero Flow" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs3" Content="&#xA;Price: 1100" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount3" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked3" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked3" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked3" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked3" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon3Upgrade" Source="image/icon3.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -98,14 +98,14 @@
         </Button>
 
 
-        <Button x:Name="upgrade4" Grid.Row="4" Height="Auto" Width="Auto" Click="Upgrade4_Click" Visibility="Collapsed">
+        <Button x:Name="upgrade4" Grid.Row="4" Height="Auto" Width="Auto" Click="Upgrade4_Click" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade4" Source="image/upgrade4.png" Opacity="0.5" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade4" Content="Hyper Drive " HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs4" Content="&#xA;Price: 12000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount4" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked4" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked4" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked4" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked4" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon4Upgrade" Source="image/icon4.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -118,14 +118,14 @@
         </Button>
 
 
-        <Button x:Name="upgrade5" Grid.Row="5" Height="Auto" Width="Auto" Click="Upgrade5_Click" Visibility="Collapsed">
+        <Button x:Name="upgrade5" Grid.Row="5" Height="Auto" Width="Auto" Click="Upgrade5_Click" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade5" Source="image/upgrade5.jpg" Opacity="0.5" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade5" Content="Infinity Injector" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs5" Content="&#xA;Price: 130000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount5" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked5" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked5" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked5" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked5" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon5Upgrade" Source="image/icon5.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -138,14 +138,14 @@
         </Button>
 
 
-        <Button x:Name="upgrade6" Grid.Row="6" Height="Auto" Width="Auto" Click="Upgrade6_Click" Visibility="Collapsed">
+        <Button x:Name="upgrade6" Grid.Row="6" Height="Auto" Width="Auto" Click="Upgrade6_Click" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade6" Source="image/upgrade6.jpg" Opacity="0.5" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade6" Content="Rapid ClickMaster" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs6" Content="&#xA;Price: 1400000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount6" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked6" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked6" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked6" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked6" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon6Upgrade" Source="image/icon6.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -158,14 +158,14 @@
         </Button>
 
 
-        <Button x:Name="upgrade7" Grid.Row="7" Height="Auto" Width="Auto" Click="Upgrade7_Click" Visibility="Collapsed">
+        <Button x:Name="upgrade7" Grid.Row="7" Height="Auto" Width="Auto" Click="Upgrade7_Click" Visibility="Visible">
             <Grid>
                 <Image x:Name="pictureUpgrade7" Source="image/upgrade7.jpg" Opacity="0.5" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade7" Content="Nitro Boost" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs7" Content="&#xA;Price: 20000000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount7" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
-                <Image Visibility="Collapsed" x:Name="pictureUnlocked7" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Visible" x:Name="pictureLocked7" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="pictureUnlocked7" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Collapsed" x:Name="pictureLocked7" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
                 <Image Visibility="Visible" x:Name="icon7Upgrade" Source="image/icon7.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
@@ -178,7 +178,7 @@
         </Button>
 
 
-        <TextBox x:Name="txtGarageNaam" Grid.Row="0" Grid.Column="1" Text="PXL-TuningShop" Background="#FF2559AD" Width="Auto" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" KeyDown="TxtGarageNaam_KeyDown"/>
+        <TextBox x:Name="txtGarageNaam" Grid.Row="0" Grid.Column="1" Text="PXL-TuningShop" Background="#FF2559AD" Width="Auto" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
         <Label x:Name="lblClicks" Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" Background="#FF2559AD" Content="" VerticalContentAlignment="Center" FontSize="14"/>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" Height="Auto" Grid.Row="2" Grid.RowSpan="7" Grid.Column="1">
@@ -195,12 +195,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW1" Source="image/newupgrade1.jpg" Width="Auto" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon1" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed"  Grid.Column="0" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level2" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level3" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed"  Grid.Column="2" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level4" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level5" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="10,96,9,10"/>
+                        <Image x:Name="pictureSCRLVW1" Source="image/newupgrade1.jpg" Width="Auto" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon1" Source="image/icon1.png" Height="30" Width="30" Visibility="Visible"  Grid.Column="0" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon1Level2" Source="image/icon1.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureIcon1Level3" Source="image/icon1.png" Height="30" Width="30" Visibility="Visible"  Grid.Column="2" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon1Level4" Source="image/icon1.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon1Level5" Source="image/icon1.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="10,96,9,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -210,12 +210,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW2" Source="image/upgrade2.jpg" Width="Auto" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon2" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon2Level2" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,111,10,10"/>
-                        <Image x:Name="pictureIcon2Level3" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon2Level4" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,111,10,10" />
-                        <Image x:Name="pictureIcon2Level5" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,111,10,10" />
+                        <Image x:Name="pictureSCRLVW2" Source="image/upgrade2.jpg" Width="Auto" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon2" Source="image/icon2.png" Height="30" Width="30" Visibility="Visible" Grid.Column="0" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon2Level2" Source="image/icon2.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,111,10,10"/>
+                        <Image x:Name="pictureIcon2Level3" Source="image/icon2.png" Height="30" Width="30" Visibility="Visible" Grid.Column="2" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon2Level4" Source="image/icon2.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,111,10,10" />
+                        <Image x:Name="pictureIcon2Level5" Source="image/icon2.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="9,111,10,10" />
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -225,12 +225,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW3" Source="image/newupgrade3.png" Width="Auto" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon3" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Margin="8,96,10,10" Grid.Column="0" />
-                        <Image x:Name="pictureIcon3Level2" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10" />
-                        <Image x:Name="pictureIcon3Level3" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon3Level4" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon3Level5" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureSCRLVW3" Source="image/newupgrade3.png" Width="Auto" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon3" Source="image/icon3.png" Height="30" Width="30" Visibility="Visible" Margin="8,96,10,10" Grid.Column="0" />
+                        <Image x:Name="pictureIcon3Level2" Source="image/icon3.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,96,10,10" />
+                        <Image x:Name="pictureIcon3Level3" Source="image/icon3.png" Height="30" Width="30" Visibility="Visible" Grid.Column="2" Margin="8,96,10,10" />
+                        <Image x:Name="pictureIcon3Level4" Source="image/icon3.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,96,10,10" />
+                        <Image x:Name="pictureIcon3Level5" Source="image/icon3.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="9,96,10,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -240,12 +240,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW4" Source="image/upgrade4.png" Width="Auto" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon4" Source="image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon4Level2" Source="image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10" />
-                        <Image x:Name="pictureIcon4Level3" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon4Level4" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon4Level5" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureSCRLVW4" Source="image/upgrade4.png" Width="Auto" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon4" Source="image/icon4.png" Height="30" Width="30" Visibility="Visible" Grid.Column="0" Margin="8,96,10,10" />
+                        <Image x:Name="pictureIcon4Level2" Source="image/icon4.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,96,10,10" />
+                        <Image x:Name="pictureIcon4Level3" Source="/image/icon4.png" Height="30" Width="30" Visibility="Visible" Grid.Column="2" Margin="8,96,10,10" />
+                        <Image x:Name="pictureIcon4Level4" Source="/image/icon4.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon4Level5" Source="/image/icon4.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="9,96,10,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -255,12 +255,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW5" Source="image/upgrade5.jpg" Width="Auto" Grid.Row="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon5" Source="image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level2" Source="image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level3" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level4" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level5" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureSCRLVW5" Source="image/upgrade5.jpg" Width="Auto" Grid.Row="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon5" Source="image/icon5.png" Height="30" Width="30" Visibility="Visible" Grid.Column="0" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon5Level2" Source="image/icon5.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureIcon5Level3" Source="/image/icon5.png" Height="30" Width="30" Visibility="Visible" Grid.Column="2" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon5Level4" Source="/image/icon5.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,96,10,10"/>
+                        <Image x:Name="pictureIcon5Level5" Source="/image/icon5.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="9,96,10,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -270,12 +270,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW6" Source="image/upgrade6.jpg" Width="Auto" Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon6" Source="image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level2" Source="image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level3" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level4" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level5" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,111,10,10" />
+                        <Image x:Name="pictureSCRLVW6" Source="image/upgrade6.jpg" Width="Auto" Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon6" Source="image/icon6.png" Height="30" Width="30" Visibility="Visible" Grid.Column="0" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon6Level2" Source="image/icon6.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,111,10,10"/>
+                        <Image x:Name="pictureIcon6Level3" Source="/image/icon6.png" Height="30" Width="30" Visibility="Visible" Grid.Column="2" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon6Level4" Source="/image/icon6.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon6Level5" Source="/image/icon6.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="9,111,10,10" />
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -285,12 +285,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="pictureSCRLVW7" Source="image/upgrade7.jpg" Width="Auto" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon7" Source="image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level2" Source="image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level3" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level4" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level5" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,111,10,10" />
+                        <Image x:Name="pictureSCRLVW7" Source="image/upgrade7.jpg" Width="Auto" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Visible" Grid.ColumnSpan="5"/>
+                        <Image x:Name="pictureIcon7" Source="image/icon7.png" Height="30" Width="30" Visibility="Visible" Grid.Column="0" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon7Level2" Source="image/icon7.png" Height="30" Width="30" Visibility="Visible" Grid.Column="1" Margin="9,111,10,10"/>
+                        <Image x:Name="pictureIcon7Level3" Source="/image/icon7.png" Height="30" Width="30" Visibility="Visible" Grid.Column="2" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon7Level4" Source="/image/icon7.png" Height="30" Width="30" Visibility="Visible" Grid.Column="3" Margin="8,111,10,10"/>
+                        <Image x:Name="pictureIcon7Level5" Source="/image/icon7.png" Height="30" Width="30" Visibility="Visible" Grid.Column="4" Margin="9,111,10,10" />
                     </Grid>
                 </StackPanel>
             </Grid>
