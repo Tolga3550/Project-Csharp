@@ -118,9 +118,15 @@
     <Resource Include="image\upgrade5.jpg" />
     <Resource Include="image\upgrade6.jpg" />
     <Resource Include="image\upgrade7.jpg" />
-    <Content Include="sounds\carRev.wav" />
-    <Content Include="sounds\congratsSound.wav" />
-    <Content Include="sounds\sadSound.wav" />
+    <Content Include="sounds\carRev.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\congratsSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\sadSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

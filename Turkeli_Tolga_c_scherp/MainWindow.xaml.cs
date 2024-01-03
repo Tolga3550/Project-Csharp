@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,19 +17,27 @@ using System.Windows.Threading;
 
 namespace Turkeli_Tolga_c_scherp
 {
-    /// <summary>
+    ///
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// Author: Tolga Turkeli
+    /// Create Date: 17-11-2023
+    /// Documentatie: C# Cookie clicker project
+    /// Dit is mijn allereerste C# project, had het in het begin moeilijk mee maar door er rustig aan te werken en informatie op te zoeken is het me toch wel gelukt.
+    /// Heb extra veel achter de computer gezeten, vooral deze laatste weken. Vandaag 03/01/2024 ben ik eindelijk klaar met het project en ik heb het gevoel dat ik oprecht veel heb bijgeleerd uit deze project.
+    /// Ik heb beetje mijn creativiteit gebruikt om niet gewoon een normale cookieclicker te maken, maar een autoclicker met verschillende auto's en mod upgrades voor de autoliefhebbers.
+    /// Ik heb een fictieve naamgeving gegeven aan de upgrades etc. omdat ik vind dat dat beter past bij een spel.
+    ///
+  
     public partial class MainWindow : Window
     {
 
         //timer
         private int aantalSeconden = 0;
 
-        private DispatcherTimer timerUpdateScherm;
-
-        double clicks1 = 100000; //clicks
+        //clicks
+        double clicks1 = 100000; 
         double totaalClicksAlles = 1000000000;
+
         //upgrades
         private bool upgrade1Gekocht = false;
         private bool upgrade2Gekocht = false;
@@ -67,6 +76,8 @@ namespace Turkeli_Tolga_c_scherp
         int levelUpgrade6 = 0;
         int levelUpgrade7 = 0;
 
+        private SoundPlayer dingSound;
+
         //fotos
         private bool mousePressed = false;
         bool verkleinen = false;
@@ -87,6 +98,8 @@ namespace Turkeli_Tolga_c_scherp
             TimerUpdateScherm.Tick += TimerUpdateScherm_Tick;
             TimerUpdateScherm.Start();
 
+            // geluid
+            dingSound = new SoundPlayer("/");
         }
 
         private void TimerUpdateScherm_Tick(object sender, EventArgs e)
@@ -94,7 +107,6 @@ namespace Turkeli_Tolga_c_scherp
 
             lblTijd.Content = $"Tijd: " + DateTime.Now.ToString("HH:mm:ss");
             lblClicks.Content = $"Clicks: {VeranderGroteNummer(Math.Floor(clicks1))}";
-
             UpdateWindowTitle();
 
             UpdateIsEnabled(upgrade1, upgrade1Prijs, levelUpgrade1);
@@ -149,7 +161,22 @@ namespace Turkeli_Tolga_c_scherp
             AutoGrootte.ScaleY = grootte;
         }
 
-
+        /// <summary>
+        /// Methode om geen herhaaldelijke code te maken, het behandelt upgrade klik-gebeurtenissen.
+        /// </summary>
+        /// <param name="upgradePrijs">Kosten van de upgrade</param>
+        /// <param name="levelUpgrade">Leven van de upgrade</param>
+        /// <param name="upgradeGekocht">Een bool, is upgradegekocht true of false?</param>
+        /// <param name="prijs">Label 'prijs', waar de upgradePrijs in word laten zien</param>
+        /// <param name="UpgradeButton">De button upgrade bijvoorbeeld 'speedracer'</param>
+        /// <param name="upgradeCountLabel">Hoeveel keer is de upgrade gekocht?</param>
+        /// <param name="UpgradeInkomen">Inkomsten van de upgrade 'passief inkomen'</param>
+        /// <param name="tbUpgrade">textblock voor tooltip, hier zie je per upgrade je passief inkomen</param>
+        /// <param name="pictureIcon">icon voor als je level 1 van de upgrade bent, verschijnt in het midden v/d venster</param>
+        /// <param name="pictureIconLevel2">icon voor als je level 2 van de upgrade bent, verschijnt in het midden v/d venster</param>
+        /// <param name="pictureIconLevel3">icon voor als je level 3 van de upgrade bent, verschijnt in het midden v/d venster</param>
+        /// <param name="pictureIconLevel4">icon voor als je level 4 van de upgrade bent, verschijnt in het midden v/d venster</param>
+        /// <param name="pictureIconLevel5">icon voor als je level 5 van de upgrade bent, verschijnt in het midden v/d venster</param>
         private void Upgrade_Click(ref double upgradePrijs, ref int levelUpgrade, ref bool upgradeGekocht, Label prijs, Button upgradeButton, Label upgradeCountLabel, ref double UpgradeInkomen, TextBlock tbUpgrade, Image pictureIcon, Image pictureIconLevel2, Image pictureIconLevel3, Image pictureIconLevel4, Image pictureIconLevel5)
         {
             if (upgradePrijs <= clicks1)
@@ -162,8 +189,8 @@ namespace Turkeli_Tolga_c_scherp
                     upgradeGekocht = true;
                     levelUpgrade++; //elke keer dat je op een upgradebutton klikt ga je een level hoger
                     upgradePrijs = upgradePrijs * Math.Pow(1.15, levelUpgrade);
-                    prijs.Content = "\nPrice: " + (Math.Ceiling(upgradePrijs));
-
+                    prijs.Content = $"\nPrice: {VeranderGroteNummer(Math.Ceiling(upgradePrijs))}";
+                    PlayUpgradeSound(); // geluid gaat af als je op button klikt
 
                     // Aantal x gekocht
                     int purchaseCount = int.Parse(upgradeCountLabel.Content.ToString()); //declareert purchaseCount en zet het om in een string om te 'showen' in de label
@@ -180,8 +207,9 @@ namespace Turkeli_Tolga_c_scherp
             else
             {
                 MessageBox.Show("You dont have enough clicks!");
+                PlaySadSound();
             }
-            lblAantalGespendeerd.Content = "Clicks:" + (Math.Floor(totaalGespendeerd));
+            lblAantalGespendeerd.Content = "Clicks spent: " + (Math.Floor(totaalGespendeerd));
 
             // dit is voor de icoontjes in het midden vd scherm visible te maken
             if (levelUpgrade == 1)
@@ -204,6 +232,7 @@ namespace Turkeli_Tolga_c_scherp
             {
                 pictureIconLevel5.Visibility = Visibility.Visible;
                 MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get 5x more passive income from this upgrade!", "A little gift :)");
+                PlayHappySound();
             }
 
             //dit is voor de ToolTip
@@ -241,9 +270,13 @@ namespace Turkeli_Tolga_c_scherp
             Upgrade_Click(ref upgrade7Prijs, ref levelUpgrade7, ref upgrade7Gekocht, lblPrijs7, upgrade7, lblUpgradeCount7, ref Upgrade7Inkomen, tbUpgrade7, pictureIcon7, pictureIcon7Level2, pictureIcon7Level3, pictureIcon7Level4, pictureIcon7Level5);
         }
 
+        /// <summary>
+        /// Berekent verminigvuldiger op basis van levelUpgrade.
+        /// </summary>
+        /// <param name="levelUpgrade">Niveau van de upgrade.</param>
+        /// <returns>Bepaalt welke vermenigvuldiger je terug krijgt.</returns>
         private double UpgradeVermenigvuldiger(int levelUpgrade)
         {
-
             double vermenigvuldiger = 1;
             switch (levelUpgrade)
             {
@@ -278,6 +311,11 @@ namespace Turkeli_Tolga_c_scherp
             }
         }
 
+        /// <summary>
+        /// Methode die bij elke tick het passieve inkomen verhoogt op basis van gekochte upgrades.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimerInvestering_Tick(object sender, EventArgs e)
         {
             aantalSeconden++;
@@ -310,7 +348,7 @@ namespace Turkeli_Tolga_c_scherp
             {
                 UpgradePassiefInkomen(Upgrade7Inkomen, levelUpgrade7);
             }
-            lblPassiefInkomen.Content = "Passive income: " + passiefinkomen + "/s";
+            lblPassiefInkomen.Content = "Passive income:" + VeranderGroteNummer(passiefinkomen) + "/s";
         }
 
         private string GeneratePassiefInkomenApart(double UpgradeInkomen, int levelUpgrade)
@@ -347,6 +385,12 @@ namespace Turkeli_Tolga_c_scherp
             this.Title = $"Auto Clicker - Score: {cookieScore}";
         }
 
+        /// <summary>
+        /// Vernadert getallen naar een makkelijk leesbare manier. (miljoen, miljard..)
+        /// Miljard in het engels is Billion en ik heb de game in het engels gemaakt.
+        /// </summary>
+        /// <param name="VeranderdeNummer">Dit is het getal dat moet worden omgezet.</param>
+        /// <returns>1 Million, 2 Milliard..</returns>
         private string VeranderGroteNummer(double VeranderdeNummer)
         {
             if (VeranderdeNummer >= 1000000000)
@@ -458,6 +502,7 @@ namespace Turkeli_Tolga_c_scherp
             TotaalClicksUnlockedUpgrade(upgrade7, totaalClicksAlles, upgrade7Prijs);
         }
 
+        //veranderen van naam bovenaan volgens keydown.
         private void TxtGarageNaam_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -516,7 +561,6 @@ namespace Turkeli_Tolga_c_scherp
             {
                 MessageBox.Show($"Error playing sound: {ex.Message}");
             }
-
         }
     }
 }

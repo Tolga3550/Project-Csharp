@@ -14,3 +14,6 @@ C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_
 C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.csproj.CoreCompileInputs.cache
 C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.exe
 C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.pdb
+C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\carRev.wav
+C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\congratsSound.wav
+C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\sadSound.wav

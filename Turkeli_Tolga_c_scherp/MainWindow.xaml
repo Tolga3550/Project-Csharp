@@ -45,8 +45,8 @@
                 <Label x:Name="lblPrijs1" Content="&#xA;Price: 15" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount1" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked1" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked1" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon1Upgrade" Source="image/icon1.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked1" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon1Upgrade" Source="image/icon1.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -65,8 +65,8 @@
                 <Label x:Name="lblPrijs2" Content="&#xA;Price: 100" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount2" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked2" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked2" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon2Upgrade" Source="image/icon2.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked2" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon2Upgrade" Source="image/icon2.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -85,8 +85,8 @@
                 <Label x:Name="lblPrijs3" Content="&#xA;Price: 1100" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount3" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked3" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked3" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon3Upgrade" Source="image/icon3.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked3" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon3Upgrade" Source="image/icon3.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -105,8 +105,8 @@
                 <Label x:Name="lblPrijs4" Content="&#xA;Price: 12000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount4" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked4" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked4" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon4Upgrade" Source="image/icon4.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked4" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon4Upgrade" Source="image/icon4.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -125,8 +125,8 @@
                 <Label x:Name="lblPrijs5" Content="&#xA;Price: 130000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount5" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked5" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked5" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon5Upgrade" Source="image/icon5.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked5" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon5Upgrade" Source="image/icon5.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -145,8 +145,8 @@
                 <Label x:Name="lblPrijs6" Content="&#xA;Price: 1400000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount6" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked6" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked6" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon6Upgrade" Source="image/icon6.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked6" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon6Upgrade" Source="image/icon6.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -165,8 +165,8 @@
                 <Label x:Name="lblPrijs7" Content="&#xA;Price: 20000000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount7" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
                 <Image Visibility="Collapsed" x:Name="pictureUnlocked7" Source="image/unlocked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="pictureLocked7" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
-                <Image Visibility="Collapsed" x:Name="icon7Upgrade" Source="image/icon7.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
+                <Image Visibility="Visible" x:Name="pictureLocked7" Source="image/locked.png" HorizontalAlignment="Right" Margin="0,0,50,0" Width="30" Height="30"/>
+                <Image Visibility="Visible" x:Name="icon7Upgrade" Source="image/icon7.png" HorizontalAlignment="Left" Margin="0,0,50,0" Width="30" Height="30" Opacity="0.5"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
