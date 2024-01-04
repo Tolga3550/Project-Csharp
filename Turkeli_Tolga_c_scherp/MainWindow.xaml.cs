@@ -56,6 +56,10 @@ namespace Turkeli_Tolga_c_scherp
         private bool geluid7VoorLevel5 = false;
         private bool geluid8VoorLevel5 = false;
 
+        bool Auto1Unlocked = false;
+        bool Auto2Unlocked = false;
+        bool Auto3Unlocked = false
+
         double passiefinkomen = 0;
         double totaalGespendeerd = 0;
 
@@ -125,6 +129,29 @@ namespace Turkeli_Tolga_c_scherp
             UpdateIsEnabled(upgrade5, upgrade5Prijs, levelUpgrade5);
             UpdateIsEnabled(upgrade6, upgrade6Prijs, levelUpgrade6);
             UpdateIsEnabled(upgrade7, upgrade7Prijs, levelUpgrade7);
+
+            //veranderen van auto image, als je bepaald aantal clicks hebt word de image veranderd.
+            if (clicks1 >= 100000 && clicks1 < 999999 && !Auto1Unlocked)
+            {
+                Auto1Unlocked = true;
+                AutoClicker.Source = new BitmapImage(new Uri("Image/100kClicksAuto.png", UriKind.Relative));
+                MessageBox.Show("Congrats! You unlocked a new car!");
+                AutoClicker.Margin = new Thickness(0, 20, 0, 0);
+            }
+            if (clicks1 >= 1000000 && clicks1 < 999999999 && !Auto2Unlocked)
+            {
+                Auto2Unlocked = true;
+                AutoClicker.Source = new BitmapImage(new Uri("Image/1milClicksAuto.png", UriKind.Relative));
+                AutoClicker.Margin = new Thickness(0, 150, 0, 0);
+                MessageBox.Show("Congrats! You unlocked a new car!");
+            }
+            if (clicks1 >= 1000000000 && !Auto3Unlocked)
+            {
+                Auto3Unlocked = true;
+                AutoClicker.Source = new BitmapImage(new Uri("Image/1miljardClicksAuto.png", UriKind.Relative));
+                AutoClicker.Margin = new Thickness(0, 200, 0, 0);
+                MessageBox.Show("Congrats! You unlocked the game creators favourite car!");
+            }
         }
 
         private void AutoClicker_MouseDown(object sender, MouseButtonEventArgs e)
@@ -136,25 +163,7 @@ namespace Turkeli_Tolga_c_scherp
             verkleinen = true;
             UpdateInvestmentButtonVisibility();
 
-            //veranderen van auto image, als je bepaald aantal clicks hebt word de image veranderd.
-
-            if (clicks1 == 100000)
-            {
-                AutoClicker.Source = new BitmapImage(new Uri("Image/100kClicksAuto.png", UriKind.Relative));
-                MessageBox.Show("Congrats! You unlocked a new car!");
-            }
-            if (clicks1 == 1000000)
-            {
-                AutoClicker.Source = new BitmapImage(new Uri("Image/1milClicksAuto.png", UriKind.Relative));
-                AutoClicker.Margin = new Thickness(0, 150, 0, 0);
-                MessageBox.Show("Congrats! You unlocked a new car!");
-            }
-            if (clicks1 == 1000000000)
-            {
-                AutoClicker.Source = new BitmapImage(new Uri("Image/1miljardClicksAuto.png", UriKind.Relative));
-                MessageBox.Show("Congrats! You unlocked the game creators favourite car!");
-                AutoClicker.Margin = new Thickness(0, 200, 0, 0);
-            }
+           
         }
 
         private void AutoClicker_MouseUp(object sender, MouseButtonEventArgs e)
@@ -297,16 +306,16 @@ namespace Turkeli_Tolga_c_scherp
                     vermenigvuldiger = 1;
                     break;
                 case 2:
-                    vermenigvuldiger = 1.5;
-                    break;
-                case 3:
                     vermenigvuldiger = 2;
                     break;
+                case 3:
+                    vermenigvuldiger = 5;
+                    break;
                 case 4:
-                    vermenigvuldiger = 2.5;
+                    vermenigvuldiger = 10;
                     break;
                 case 5:
-                    vermenigvuldiger = 12.5;
+                    vermenigvuldiger = 30;
                     break;
             }
             return vermenigvuldiger;
