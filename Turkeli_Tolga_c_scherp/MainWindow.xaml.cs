@@ -58,7 +58,7 @@ namespace Turkeli_Tolga_c_scherp
 
         bool Auto1Unlocked = false;
         bool Auto2Unlocked = false;
-        bool Auto3Unlocked = false
+        bool Auto3Unlocked = false;
 
         double passiefinkomen = 0;
         double totaalGespendeerd = 0;
@@ -413,7 +413,7 @@ namespace Turkeli_Tolga_c_scherp
         /// </summary>
         /// <param name="VeranderdeNummer">Dit is het getal dat moet worden omgezet.</param>
         /// <returns>1 Million, 2 Milliard..</returns>
-        private string VeranderGroteNummer(double VeranderdeNummer)
+        public string VeranderGroteNummer(double VeranderdeNummer)
         {
             if (VeranderdeNummer >= 1000000000)
             {
@@ -582,6 +582,12 @@ namespace Turkeli_Tolga_c_scherp
             {
                 MessageBox.Show($"Error playing sound: {ex.Message}");
             }
+        }
+
+        private void btnSecret_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 windowSecret = new Window1();
+            windowSecret.Show();
         }
     }
 }

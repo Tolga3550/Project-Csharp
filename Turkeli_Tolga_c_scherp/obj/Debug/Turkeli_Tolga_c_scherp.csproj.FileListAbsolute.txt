@@ -17,3 +17,24 @@ C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_
 C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\carRev.wav
 C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\congratsSound.wav
 C:\Users\tolga\OneDrive\Bureaublad\Project\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\sadSound.wav
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.csproj.AssemblyReference.cache
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\MainWindow.g.cs
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Window1.g.cs
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\App.g.cs
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp_Content.g.cs
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp_MarkupCompile.cache
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp_MarkupCompile.lref
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.exe
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.pdb
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\carRev.wav
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\congratsSound.wav
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\sounds\sadSound.wav
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\Turkeli_Tolga_c_scherp.exe.config
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\Turkeli_Tolga_c_scherp.exe
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\bin\Debug\Turkeli_Tolga_c_scherp.pdb
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\MainWindow.baml
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Window1.baml
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.g.resources
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.Properties.Resources.resources
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.csproj.GenerateResource.cache
+C:\Users\tolga\OneDrive\Bureaublad\Project def versie\Turkeli_Tolga_c_scherp\Turkeli_Tolga_c_scherp\obj\Debug\Turkeli_Tolga_c_scherp.csproj.CoreCompileInputs.cache

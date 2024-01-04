@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Turkeli_Tolga_c_scherp"
+
         mc:Ignorable="d"
             Title="MainWindow" Height="667" Width="949">
     <Grid Margin="0,0,0,-6">
@@ -36,7 +37,8 @@
             </Image.RenderTransform>
         </Image>
 
-        <Label Content="Mod Shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="#FF2559AD" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Mod Shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="#FF2559AD" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Collapsed"/>
+        <Button x:Name="btnSecret" Content="Secret shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="Black" Foreground="#FFF1E90D" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Visible" Click="btnSecret_Click"/>
 
         <Button x:Name="upgrade1" Grid.Row="1" Height="Auto" Click="Upgrade1_Click" Width="Auto" Visibility="Collapsed">
             <Grid>
