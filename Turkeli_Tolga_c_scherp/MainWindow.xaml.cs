@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -27,15 +28,15 @@ namespace Turkeli_Tolga_c_scherp
     /// Ik heb beetje mijn creativiteit gebruikt om niet gewoon een normale cookieclicker te maken, maar een autoclicker met verschillende auto's en mod upgrades voor de autoliefhebbers.
     /// Ik heb een fictieve naamgeving gegeven aan de upgrades etc. omdat ik vind dat dat beter past bij een spel.
     ///
-  
+
     public partial class MainWindow : Window
     {
 
         //timer
-        private int aantalSeconden = 0;
+        private int aantalSeconden = 890;
 
         //clicks
-        double clicks1 = 10000000000; 
+        double clicks1 = 10000000000;
         double totaalClicksAlles = 1000000000;
 
         //upgrades
@@ -54,7 +55,6 @@ namespace Turkeli_Tolga_c_scherp
         private bool geluid5VoorLevel5 = false;
         private bool geluid6VoorLevel5 = false;
         private bool geluid7VoorLevel5 = false;
-        private bool geluid8VoorLevel5 = false;
 
         bool Auto1Unlocked = false;
         bool Auto2Unlocked = false;
@@ -89,6 +89,36 @@ namespace Turkeli_Tolga_c_scherp
         int levelUpgrade6 = 0;
         int levelUpgrade7 = 0;
 
+        //achievements
+        bool ach10kClicks = false;
+        bool ach25kClicks = false;
+        bool ach50kClicks = false;
+        bool ach75kClicks = false;
+        bool ach100kClicks = false;
+        bool ach150kClicks = false;
+        bool ach200kClicks = false;
+        bool ach300kClicks = false;
+        bool ach400kClicks = false;
+        bool ach500kClicks = false;
+        bool ach1mClicks = false;
+        bool achMaxLvlHyper = false;
+        bool achMaxLvlSpeed = false;
+        bool achMaxLvlInfinity = false;
+        bool achUnlockAllUpgr = false;
+        bool ach15MinPlay = false;
+        bool ach30minPlay = false;
+        bool ach1hPlay = false;
+        //deze nog doen
+        bool achUnlockAllBonus = false;
+        bool achUnlockEaster = false;
+       
+
+        bool IsAchMaxLvlHyperDone = false;
+        bool IsAchMaxLvlSpeedDone = false;
+        bool IsAchMaxLvlInfinityDone = false;
+        bool IsAch15MinPlayDone = false;
+        bool IsAch30MinPlayDone = false;
+        bool IsAch1hPlayDone = false;
         private SoundPlayer dingSound;
 
         //fotos
@@ -152,7 +182,100 @@ namespace Turkeli_Tolga_c_scherp
                 AutoClicker.Margin = new Thickness(0, 200, 0, 0);
                 MessageBox.Show("Congrats! You unlocked the game creators favourite car!");
             }
+
+            //achievements
+            if (clicks1 >= 10000 && !ach10kClicks)
+            {
+                ach10kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 10k Clicks!");
+                txtAch1.Visibility = Visibility.Visible;
+                imgCheck1.Visibility = Visibility.Visible;
+                imgAch1.Visibility = Visibility.Visible;
+
+            }
+            if (clicks1 >= 25000 && !ach25kClicks)
+            {
+                ach25kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 25k Clicks!");
+                txtAch2.Visibility = Visibility.Visible;
+                imgCheck2.Visibility = Visibility.Visible;
+                imgAch2.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 50000 && !ach50kClicks)
+            {
+                ach50kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 50k Clicksç");
+                txtAch3.Visibility = Visibility.Visible;
+                imgCheck3.Visibility = Visibility.Visible;
+                imgAch3.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 75000 && !ach75kClicks)
+            {
+                ach75kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 75k Clicks!");
+                txtAch4.Visibility = Visibility.Visible;
+                imgCheck4.Visibility = Visibility.Visible;
+                imgAch4.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 100000 && !ach100kClicks)
+            {
+                ach100kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 100k Clicks!");
+                txtAch5.Visibility = Visibility.Visible;
+                imgCheck5.Visibility = Visibility.Visible;
+                imgAch5.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 150000 && !ach150kClicks)
+            {
+                ach150kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 150k Clicks!");
+                txtAch6.Visibility = Visibility.Visible;
+                imgCheck6.Visibility = Visibility.Visible;
+                imgAch6.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 200000 && !ach200kClicks)
+            {
+               ach200kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 200k Clicks!");
+                txtAch7.Visibility = Visibility.Visible;
+                imgCheck7.Visibility = Visibility.Visible;
+                imgAch7.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 300000 && !ach300kClicks)
+            {
+                ach300kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 300k Clicks!");
+                txtAch8.Visibility = Visibility.Visible;
+                imgCheck8.Visibility = Visibility.Visible;
+                imgAch8.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 400000 && !ach400kClicks)
+            {
+                ach400kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 400k Clicks!");
+                txtAch9.Visibility = Visibility.Visible;
+                imgCheck9.Visibility = Visibility.Visible;
+                imgAch9.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 500000 && !ach500kClicks)
+            {
+                ach500kClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 500k Clicks!");
+                txtAch10.Visibility = Visibility.Visible;
+                imgCheck10.Visibility = Visibility.Visible;
+                imgAch10.Visibility = Visibility.Visible;
+            }
+            if (clicks1 >= 1000000 && !ach1mClicks)
+            {
+                ach1mClicks = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 1 million Clicks!");
+                txtAch11.Visibility = Visibility.Visible;
+                imgCheck11.Visibility = Visibility.Visible;
+                imgAch11.Visibility = Visibility.Visible;
+            }
+            AchievementsActies();
         }
+
 
         private void AutoClicker_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -163,7 +286,8 @@ namespace Turkeli_Tolga_c_scherp
             verkleinen = true;
             UpdateInvestmentButtonVisibility();
 
-           
+            
+
         }
 
         private void AutoClicker_MouseUp(object sender, MouseButtonEventArgs e)
@@ -178,6 +302,7 @@ namespace Turkeli_Tolga_c_scherp
             AutoGrootte.ScaleX = grootte;
             AutoGrootte.ScaleY = grootte;
         }
+
 
         /// <summary>
         /// Methode om geen herhaaldelijke code te maken, het behandelt upgrade klik-gebeurtenissen.
@@ -227,7 +352,7 @@ namespace Turkeli_Tolga_c_scherp
                 MessageBox.Show("You dont have enough clicks!");
                 PlaySadSound();
             }
-            lblAantalGespendeerd.Content = "Clicks spent: " + (Math.Floor(totaalGespendeerd));
+            lblAantalGespendeerd.Content = "Clicks spent: " + VeranderGroteNummer(Math.Floor(totaalGespendeerd));
 
             // dit is voor de icoontjes in het midden vd scherm visible te maken
             if (levelUpgrade == 1)
@@ -259,13 +384,15 @@ namespace Turkeli_Tolga_c_scherp
 
             //dit is voor de ToolTip
             tbUpgrade.Text = GeneratePassiefInkomenApart(UpgradeInkomen, levelUpgrade);
-
             UnlockedVisibility();
+            UnlockAllUpgradesAch();
         }
 
         private void Upgrade1_Click(object sender, RoutedEventArgs e)
         {
             Upgrade_Click(ref upgrade1Prijs, ref levelUpgrade1, ref upgrade1Gekocht, lblPrijs1, upgrade1, lblUpgradeCount1, ref Upgrade1Inkomen, tbUpgrade1, pictureIcon1, pictureIcon1Level2, pictureIcon1Level3, pictureIcon1Level4, pictureIcon1Level5, ref geluid1VoorLevel5);
+            CheckMaxLevelUpgradesAch();
+            AchievementsActies();
         }
         private void Upgrade2_Click(object sender, RoutedEventArgs e)
         {
@@ -278,10 +405,14 @@ namespace Turkeli_Tolga_c_scherp
         private void Upgrade4_Click(object sender, RoutedEventArgs e)
         {
             Upgrade_Click(ref upgrade4Prijs, ref levelUpgrade4, ref upgrade4Gekocht, lblPrijs4, upgrade4, lblUpgradeCount4, ref Upgrade4Inkomen, tbUpgrade4, pictureIcon4, pictureIcon4Level2, pictureIcon4Level3, pictureIcon4Level4, pictureIcon4Level5, ref geluid4VoorLevel5);
+            CheckMaxLevelUpgradesAch();
+            AchievementsActies();
+
         }
         private void Upgrade5_Click(object sender, RoutedEventArgs e)
         {
             Upgrade_Click(ref upgrade5Prijs, ref levelUpgrade5, ref upgrade5Gekocht, lblPrijs5, upgrade5, lblUpgradeCount5, ref Upgrade5Inkomen, tbUpgrade5, pictureIcon5, pictureIcon5Level2, pictureIcon5Level3, pictureIcon5Level4, pictureIcon5Level5, ref geluid5VoorLevel5);
+            CheckMaxLevelUpgradesAch();
         }
         private void Upgrade6_Click(object sender, RoutedEventArgs e)
         {
@@ -371,6 +502,19 @@ namespace Turkeli_Tolga_c_scherp
                 UpgradePassiefInkomen(Upgrade7Inkomen, levelUpgrade7);
             }
             lblPassiefInkomen.Content = "Passive income:" + VeranderGroteNummer(passiefinkomen) + "/s";
+
+            if (aantalSeconden >= 900)
+            {
+                ach15MinPlay = true;
+            }
+            if (aantalSeconden >= 1800)
+            {
+                ach30minPlay = true;
+            }
+            if (aantalSeconden >= 3600)
+            {
+                ach1hPlay = true;
+            }
         }
 
         private string GeneratePassiefInkomenApart(double UpgradeInkomen, int levelUpgrade)
@@ -589,6 +733,108 @@ namespace Turkeli_Tolga_c_scherp
             Window1 windowSecret = new Window1();
             windowSecret.Show();
         }
+
+        private void arrowButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (achievementsPanel.Visibility == Visibility.Collapsed)
+            {
+                achievementsPanel.Visibility = Visibility.Visible;
+                AutoClicker.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                achievementsPanel.Visibility = Visibility.Collapsed;
+                AutoClicker.Visibility = Visibility.Visible;
+
+            }
+
+        }
+
+        private void CheckMaxLevelUpgradesAch()
+        {
+            if (levelUpgrade1 == 5)
+            {
+                achMaxLvlSpeed = true;
+            }
+            if (levelUpgrade4 == 5)
+            {
+                achMaxLvlHyper = true;
+            }
+            if (levelUpgrade5 == 5)
+            {
+                achMaxLvlInfinity = true;
+            }
+        }
+
+        private void UnlockAllUpgradesAch()
+        {
+            if (upgrade1Gekocht && upgrade2Gekocht && upgrade3Gekocht && upgrade4Gekocht && upgrade5Gekocht && upgrade6Gekocht && upgrade7Gekocht)
+            {
+                achUnlockAllUpgr = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: Unlock all upgrades.");
+                txtAch15.Visibility = Visibility.Visible;
+                imgCheck15.Visibility = Visibility.Visible;
+                imgAch15.Visibility = Visibility.Visible;
+
+            }
+        }
+
+        private void AchievementsActies()
+        {
+           
+            if (achMaxLvlHyper && !IsAchMaxLvlHyperDone)
+            {
+                IsAchMaxLvlHyperDone = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: Maximum level Hyper Drive!");
+                txtAch12.Visibility = Visibility.Visible;
+                imgCheck12.Visibility = Visibility.Visible;
+                imgAch12.Visibility = Visibility.Visible;
+            }
+            if (achMaxLvlSpeed && !IsAchMaxLvlSpeedDone)
+            {
+                IsAchMaxLvlSpeedDone = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: Maximum level Speed Racer!");
+                txtAch13.Visibility = Visibility.Visible;
+                imgCheck13.Visibility = Visibility.Visible;
+                imgAch13.Visibility = Visibility.Visible;
+            }
+            if (achMaxLvlInfinity && !IsAchMaxLvlInfinityDone)
+            {
+                IsAchMaxLvlInfinityDone = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: Maximum level Infinity Injector!");
+                txtAch14.Visibility = Visibility.Visible;
+                imgCheck14.Visibility = Visibility.Visible;
+                imgAch14.Visibility = Visibility.Visible;
+            }
+            if (ach15MinPlay && !IsAch15MinPlayDone)
+            {
+                IsAch15MinPlayDone = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 15 min playtime!");
+                txtAch16.Visibility = Visibility.Visible;
+                imgCheck16.Visibility = Visibility.Visible;
+                imgAch16.Visibility = Visibility.Visible;
+            }
+            if (ach30minPlay && !IsAch30MinPlayDone)
+            {
+                IsAch30MinPlayDone = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 30 min playtime!");
+                txtAch17.Visibility = Visibility.Visible;
+                imgCheck17.Visibility = Visibility.Visible;
+                imgAch17.Visibility = Visibility.Visible;
+            }
+            if (ach1hPlay && !IsAch1hPlayDone)
+            {
+                IsAch1hPlayDone = true;
+                MessageBox.Show("Congratulations! Achievement unlocked: 1 hour playtime!");
+                txtAch18.Visibility = Visibility.Visible;
+                imgCheck18.Visibility = Visibility.Visible;
+                imgAch18.Visibility = Visibility.Visible;
+            }
+        }
+
+
+
+
     }
 }
 

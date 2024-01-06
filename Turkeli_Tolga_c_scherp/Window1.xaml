@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:Turkeli_Tolga_c_scherp"
         mc:Ignorable="d"
  
-        Title="Window1" Height="800" Width="1200">
+        Title="Window1" Height="800" Width="1600">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="imageBonus/BonusBackground.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -28,32 +29,77 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Background="Black" Foreground="#FFF1E90D" Content="Exotic cars" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center"/>
-        <Button x:Name="upgrade1" Grid.Row="1" Height="Auto" Width="Auto" Visibility="Visible">
+        <Button x:Name="upgrade1Bonus" Grid.Row="1" Grid.Column="0" Height="Auto" Width="Auto" Visibility="Visible" Click="upgrade1Bonus_Click">
             <Grid>
-                <Image x:Name="pictureUpgrade1Secret" Source="imageBonus/upgr1Bonus.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Label x:Name="lblUpgrade1Secret" Content="Speed Racer" HorizontalAlignment="Center"/>
-                <Label x:Name="lblPrijs1Secret" Content="&#xA;Price: 15" HorizontalContentAlignment="Center"/>
-                <Label x:Name="lblUpgradeCount1Secret" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="14" Foreground="black"/>
+                <Image x:Name="pictureUpgrade1Bonus" Source="imageBonus/upgr1Bonus.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label x:Name="lblUpgrade1Bonus" Content="Speed Racer" HorizontalAlignment="Center"/>
+                <Label x:Name="lblPrijs1Bonus" Content="&#xA;Price: 15" HorizontalContentAlignment="Center"/>
+                <Label x:Name="lblUpgradeCount1Bonus" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="14" Foreground="black"/>
                 <ToolTipService.ToolTip>
                     <ToolTip>
                         <StackPanel>
-                            <TextBlock x:Name="tbUpgrade1Secret" Text="Passive Income: 0/s"/>
+                            <TextBlock x:Name="tbUpgrade1Bonus" Text="Passive Income: 0/s"/>
                         </StackPanel>
                     </ToolTip>
                 </ToolTipService.ToolTip>
             </Grid>
+            <Button.Resources>
+                <Storyboard x:Key="HoverStoryboard">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BugattiClickImage" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BugattiGraph" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 2x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 4x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 8x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 16x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 32x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 64x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Speed Racer is 128x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </Button.Resources>
             <Button.Triggers>
+                <!-- Trigger the storyboard on MouseEnter -->
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BugattiClickImage" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BugattiGraph" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
+                    <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
@@ -64,6 +110,28 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BugattiGraph" Storyboard.TargetProperty="Visibility">
                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                             </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -72,9 +140,9 @@
 
 
 
-        <Button x:Name="upgrade2Secret" Grid.Row="2" Height="Auto" Width="Auto" Visibility="Visible">
+        <Button x:Name="upgrade2Bonus" Grid.Row="2" Height="Auto" Width="Auto" Visibility="Visible" Click="upgrade2Bonus_Click">
             <Grid>
-                <Image x:Name="pictureUpgrade2Secret" Source="imageBonus/upgr2Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image x:Name="pictureUpgrade2Bonus" Source="imageBonus/upgr2Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade2" Content="Turbo Boost"  HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs2" Content="&#xA;Price: 100" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount2" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
@@ -86,18 +154,63 @@
                     </ToolTip>
                 </ToolTipService.ToolTip>
             </Grid>
+            <Button.Resources>
+                <Storyboard x:Key="HoverStoryboard">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MclarenClickImage" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MclarenGraph" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 2x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 4x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 8x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 16x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 32x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 64x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Turbo Boost is 128x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </Button.Resources>
             <Button.Triggers>
+                <!-- Trigger the storyboard on MouseEnter -->
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MclarenClickImage" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MclarenGraph" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
+                    <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
@@ -108,6 +221,28 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MclarenGraph" Storyboard.TargetProperty="Visibility">
                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                             </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -115,9 +250,9 @@
         </Button>
 
 
-        <Button x:Name="upgrade3" Grid.Row="3" Height="Auto" Width="Auto" Visibility="Visible">
+        <Button x:Name="upgrade3Bonus" Grid.Row="3" Height="Auto" Width="Auto" Visibility="Visible" Click="upgrade3Bonus_Click">
             <Grid>
-                <Image x:Name="pictureUpgrade3Secret" Source="imageBonus/upgr3Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image x:Name="pictureUpgrade3Bonus" Source="imageBonus/upgr3Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade3" Content="Aero Flow" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs3" Content="&#xA;Price: 1100" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount3" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
@@ -129,18 +264,63 @@
                     </ToolTip>
                 </ToolTipService.ToolTip>
             </Grid>
+            <Button.Resources>
+                <Storyboard x:Key="HoverStoryboard">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PaganiClickImage" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PaganiGraph" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 2x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 4x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 8x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 16x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 32x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 64x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Aero Flow is 128x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </Button.Resources>
             <Button.Triggers>
+                <!-- Trigger the storyboard on MouseEnter -->
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PaganiClickImage" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PaganiGraph" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
+                    <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
@@ -151,6 +331,28 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PaganiGraph" Storyboard.TargetProperty="Visibility">
                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                             </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -158,9 +360,9 @@
         </Button>
 
 
-        <Button x:Name="upgrade4" Grid.Row="4" Height="Auto" Width="Auto" Visibility="Visible">
+        <Button x:Name="upgrade4Bonus" Grid.Row="4" Height="Auto" Width="Auto" Visibility="Visible" Click="upgrade4Bonus_Click">
             <Grid>
-                <Image x:Name="pictureUpgrade4Secret" Source="imageBonus/upgr4Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image x:Name="pictureUpgrade4Bonus" Source="imageBonus/upgr4Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade4" Content="Hyper Drive " HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs4" Content="&#xA;Price: 12000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount4" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
@@ -172,18 +374,63 @@
                     </ToolTip>
                 </ToolTipService.ToolTip>
             </Grid>
+            <Button.Resources>
+                <Storyboard x:Key="HoverStoryboard">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="KoeniClickImage" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="KoeniGraph" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 2x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 4x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 8x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 16x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 32x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 64x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Hyper Drive is 128x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </Button.Resources>
             <Button.Triggers>
+                <!-- Trigger the storyboard on MouseEnter -->
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="KoeniClickImage" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="KoeniGraph" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
+                    <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
@@ -194,6 +441,28 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="KoeniGraph" Storyboard.TargetProperty="Visibility">
                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                             </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -201,9 +470,9 @@
         </Button>
 
 
-        <Button x:Name="upgrade5" Grid.Row="5" Height="Auto" Width="Auto" Visibility="Visible">
+        <Button x:Name="upgrade5Bonus" Grid.Row="5" Height="Auto" Width="Auto" Visibility="Visible" Click="upgrade5Bonus_Click">
             <Grid>
-                <Image x:Name="pictureUpgrade5Secret" Source="imageBonus/upgr5Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image x:Name="pictureUpgrade5Bonus" Source="imageBonus/upgr5Bonus.jpg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade5" Content="Infinity Injector" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs5" Content="&#xA;Price: 130000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount5" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
@@ -215,18 +484,63 @@
                     </ToolTip>
                 </ToolTipService.ToolTip>
             </Grid>
+            <Button.Resources>
+                <Storyboard x:Key="HoverStoryboard">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BmwClickImage" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BmwGraph" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 2x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 4x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 8x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 16x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 32x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 64x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Infinity Injector is 128x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </Button.Resources>
             <Button.Triggers>
+                <!-- Trigger the storyboard on MouseEnter -->
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BmwClickImage" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BmwGraph" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
+                    <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
@@ -237,6 +551,28 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BmwGraph" Storyboard.TargetProperty="Visibility">
                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                             </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -244,9 +580,9 @@
         </Button>
 
 
-        <Button x:Name="upgrade6" Grid.Row="6" Height="Auto" Width="Auto" Visibility="Visible">
+        <Button x:Name="upgrade6Bonus" Grid.Row="6" Height="Auto" Width="Auto" Visibility="Visible" Click="upgrade6Bonus_Click">
             <Grid>
-                <Image x:Name="pictureUpgrade6Secret" Source="imageBonus/upgr6Bonus.jpeg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image x:Name="pictureUpgrade6Bonus" Source="imageBonus/upgr6Bonus.jpeg" Stretch="UniformToFill"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label x:Name="lblUpgrade6" Content="Rapid ClickMaster" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblPrijs6" Content="&#xA;Price: 1400000" HorizontalContentAlignment="Center"/>
                 <Label x:Name="lblUpgradeCount6" Content="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0" FontSize="14" Foreground="black"/>
@@ -258,18 +594,63 @@
                     </ToolTip>
                 </ToolTipService.ToolTip>
             </Grid>
+            <Button.Resources>
+                <Storyboard x:Key="HoverStoryboard">
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="E46ClickImage" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="E46Graph" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 2x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 4x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 8x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 16x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 32x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 64x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Content">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="Rapid Clickmaster is 128x as efficient!" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </Button.Resources>
             <Button.Triggers>
+                <!-- Trigger the storyboard on MouseEnter -->
                 <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="E46ClickImage" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="E46Graph" Storyboard.TargetProperty="Visibility">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
+                    <BeginStoryboard Storyboard="{StaticResource HoverStoryboard}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
@@ -280,6 +661,28 @@
                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="E46Graph" Storyboard.TargetProperty="Visibility">
                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                             </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription1" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription2" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription3" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription4" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription5" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription6" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="lblDescription7" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -287,38 +690,66 @@
         </Button>
 
 
-        <Label x:Name="lblPricelist" Grid.Column="1" Grid.Row="0"  Background="Black" Content="Pricelist: " Foreground="#FFF1E90D"/>
-        <Label x:Name="lblPrijsSecret1" Grid.Column="1" Grid.Row="1"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
-        <Label x:Name="lblPrijsSecret2" Grid.Column="1" Grid.Row="2"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
-        <Label x:Name="lblPrijsSecret3" Grid.Column="1" Grid.Row="3"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
-        <Label x:Name="lblPrijsSecret4" Grid.Column="1" Grid.Row="4"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
-        <Label x:Name="lblPrijsSecret5" Grid.Column="1" Grid.Row="5"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
-        <Label x:Name="lblPrijsSecret6" Grid.Column="1" Grid.Row="6"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
-        <Label  Grid.Column="1" Grid.Row="7"  Background="Black"/>
-        <Label  Grid.Column="0" Grid.Row="7"  Background="Black"/>
-
-        <Label Grid.Column="2" Grid.Row="0" Content="Pick carefully :)" FontSize="20" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF1E90D"/>
         
-        <Image x:Name="BugattiClickImage" Source="imageBonus/BugattiClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="2" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Image x:Name="BugattiGraph" Source="imageBonus/BugattiGraph.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
+        <Label Grid.Column="1" Grid.Row="0" Content="Pick carefully :)" FontSize="20" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF1E90D"/>
+
+        <Image x:Name="BugattiClickImage" Source="imageBonus/BugattiClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
+        <Image x:Name="BugattiGraph" Source="imageBonus/BugattiGraph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
+        <Image x:Name="MclarenClickImage" Source="imageBonus/MclarenClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
+        <Image x:Name="MclarenGraph" Source="imageBonus/MclarenGraph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
+        <Image x:Name="PaganiClickImage" Source="imageBonus/PaganiClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
+        <Image x:Name="PaganiGraph" Source="imageBonus/paganiGraph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
+        <Image x:Name="KoeniClickImage" Source="imageBonus/KoenigsegClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
+        <Image x:Name="KoeniGraph" Source="imageBonus/KoenigseggGraph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
+        <Image x:Name="BmwClickImage" Source="imageBonus/BmwClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
+        <Image x:Name="BmwGraph" Source="imageBonus/BmwGraph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
+        <Image x:Name="E46ClickImage" Source="imageBonus/E46Click.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed" Width="400" Height="300"/>
+        <Image x:Name="E46Graph" Source="imageBonus/E46Graph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+
         
-        <Image x:Name="MclarenClickImage" Source="imageBonus/MclarenClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="2" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Image x:Name="MclarenGraph" Source="imageBonus/MclarenGraph.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+        <Label x:Name="lblPricelist" Grid.Column="2" Grid.Row="0"  Background="Black" Content="Pricelist: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus1" Grid.Column="2" Grid.Row="1"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus2" Grid.Column="2" Grid.Row="2"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus3" Grid.Column="2" Grid.Row="3"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus4" Grid.Column="2" Grid.Row="4"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus5" Grid.Column="2" Grid.Row="5"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus6" Grid.Column="2" Grid.Row="6"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPrijsBonus7" Grid.Column="2" Grid.Row="7"  Background="Black" Content="Price: " Foreground="#FFF1E90D"/>
 
-        <Image x:Name="PaganiClickImage" Source="imageBonus/PaganiClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="2" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Image x:Name="PaganiGraph" Source="imageBonus/paganiGraph.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
 
-        <Image x:Name="KoeniClickImage" Source="imageBonus/KoenigsegClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.Column="2" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Image x:Name="KoeniGraph" Source="imageBonus/KoenigseggGraph.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
 
-        <Image x:Name="BmwClickImage" Source="imageBonus/BmwClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="2" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Image x:Name="BmwGraph" Source="imageBonus/BmwGraph.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
 
-        <Image x:Name="E46ClickImage" Source="imageBonus/E46Click.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.Column="2" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed" Width="400" Height="300"/>
-        <Image x:Name="E46Graph" Source="imageBonus/E46Graph.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+        <Label Grid.Column="3" Grid.Row="0" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Bonus" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus1" Grid.Column="3" Grid.Row="1" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus2" Grid.Column="3" Grid.Row="2" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus3" Grid.Column="3" Grid.Row="3" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus4" Grid.Column="3" Grid.Row="4" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus5" Grid.Column="3" Grid.Row="5" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus6" Grid.Column="3" Grid.Row="6" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="vermenigvuldigingBonus7" Grid.Column="3" Grid.Row="7" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+
+        
+
+        <Label Grid.Column="4" Grid.Row="0" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Description" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription1" Grid.Column="4" Grid.Row="1" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription2" Grid.Column="4" Grid.Row="2" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription3" Grid.Column="4" Grid.Row="3" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription4" Grid.Column="4" Grid.Row="4" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription5" Grid.Column="4" Grid.Row="5" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription6" Grid.Column="4" Grid.Row="6" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblDescription7" Grid.Column="4" Grid.Row="7" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="#FFF1E90D"/>
+
+
+
+
 
     </Grid>
-
 
 
 </Window>

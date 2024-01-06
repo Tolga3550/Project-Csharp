@@ -15,6 +15,7 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -26,7 +27,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="2" Grid.Row="3" Grid.RowSpan="5" x:Name="AutoClicker" Source="/image/clicker.png" MouseDown="AutoClicker_MouseDown" MouseUp="AutoClicker_MouseUp" Margin="0,124,0,-124" Stretch="Fill" Cursor="">
+        <Image Panel.ZIndex="1" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="5" x:Name="AutoClicker" Source="/image/clicker.png" MouseDown="AutoClicker_MouseDown" MouseUp="AutoClicker_MouseUp" Margin="0,124,0,-124" Stretch="Fill" Cursor="">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" ScaleY="1" x:Name="AutoGrootte"/>
@@ -37,8 +38,157 @@
             </Image.RenderTransform>
         </Image>
 
-        <Label Content="Mod Shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="#FF2559AD" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Collapsed"/>
-        <Button x:Name="btnSecret" Content="Secret shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="Black" Foreground="#FFF1E90D" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Visible" Click="btnSecret_Click"/>
+        <Label Content="Mod Shop" Grid.Row="0" Height="Auto" Width="Auto" FontSize="36" Background="#FF2559AD" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Visible"/>
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Column="3" Grid.Row="1" Grid.RowSpan="7">
+            <Grid x:Name="achievementsPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="auto" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4.5*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF64BAFD" Offset="1"/>
+                        <GradientStop Color="#FF101D28"/>
+                        <GradientStop Color="#FF070D13"/>
+                        <GradientStop Color="#FFB078F7" Offset="0.3"/>
+                        <GradientStop Color="#FF66B7FC" Offset="0.977"/>
+                        <GradientStop Color="#FFCD58FB"/>
+                        <GradientStop Color="#FF825BBA"/>
+                        <GradientStop Color="#FFAD79F7"/>
+                    </RadialGradientBrush>
+                </Grid.Background>
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Achievements" Foreground="White" FontSize="36"/>
+
+                <TextBlock x:Name="txtAch1" Padding="5,0,0,0" Grid.Row="1" Text="Your first 10 000 clicks!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Visibility="Collapsed"/>
+                <Image x:Name="imgAch1"  Source="AchIcons/Iron1Rank.png" Grid.Column="2" Grid.Row="1" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck1"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="1" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch2" Padding="5,0,0,0" Grid.Row="2" Text="Your first 25 000 clicks!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Visibility="Collapsed"/>
+                <Image x:Name="imgAch2" Source="AchIcons/Iron2Rank.png" Grid.Column="2" Grid.Row="2" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck2"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="2" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch3" Padding="5,0,0,0" Grid.Row="3" Text="Your first 50 000 clicks!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Visibility="Collapsed"/>
+                <Image x:Name="imgAch3" Source="AchIcons/Iron3Rank.png" Grid.Column="2" Grid.Row="3" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck3"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="3" Height="40" Visibility="Collapsed" />
+
+                <TextBlock x:Name="txtAch4" Padding="5,0,0,0" Grid.Row="4" Text="Your first 75 000 clicks!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Visibility="Collapsed"/>
+                <Image x:Name="imgAch4" Source="AchIcons/Silver1Rank.png" Grid.Column="2" Grid.Row="4" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck4"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="4" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch5" Padding="5,0,0,0" Grid.Row="5" Text="100 000 clicks! Woohoo!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Visibility="Collapsed"/>
+                <Image x:Name="imgAch5" Source="AchIcons/Silver2Rank.png" Grid.Column="2" Grid.Row="5" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck5"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="5" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch6" Padding="5,0,0,0" Grid.Row="6" Text="150 000 clicks! Not bored?" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Visibility="Collapsed"/>
+                <Image x:Name="imgAch6" Source="AchIcons/Silver3Rank.png" Grid.Column="2" Grid.Row="6" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck6"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="6" Height="40" Visibility="Collapsed" />
+
+
+                <TextBlock x:Name="txtAch7" Padding="5,0,0,0" Grid.Row="7" Text="200 000 clicks! New milestone!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Visibility="Collapsed"/>
+                <Image x:Name="imgAch7" Source="AchIcons/Gold1Rank.png" Grid.Column="2" Grid.Row="7" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck7"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="7" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch8" Padding="5,0,0,0" Grid.Row="8" Text="300 000 clicks! Wow!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch8" Source="AchIcons/Gold2Rank.png" Grid.Column="2" Grid.Row="8" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck8"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="8" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch9" Padding="5,0,0,0" Grid.Row="9" Text="400 000 clicks! Incredible!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch9" Source="AchIcons/Gold3Rank.png" Grid.Column="2" Grid.Row="9" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck9"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="9" Height="40" Visibility="Collapsed" />
+
+                <TextBlock x:Name="txtAch10" Padding="5,0,0,0" Grid.Row="10" Text="500 000 clicks!!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch10" Source="AchIcons/Platinum1Rank.png" Grid.Column="2" Grid.Row="10" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck10"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="10" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch11" Padding="5,0,0,0" Grid.Row="11" Text="1 000 000 clicks!!" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch11" Source="AchIcons/Platinum2Rank.png" Grid.Column="2" Grid.Row="11" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck11"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="11" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch12" Padding="5,0,0,0" Grid.Row="12" Text="Own max. level Hyper Drive." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch12" Source="AchIcons/Platinum3Rank.png" Grid.Column="2" Grid.Row="12" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck12"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="12" Height="40" Visibility="Collapsed" />
+
+                <TextBlock x:Name="txtAch13" Padding="5,0,0,0" Grid.Row="13" Text="Own max. level Speed Racer." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch13" Source="AchIcons/Diamond1Rank.png" Grid.Column="2" Grid.Row="13" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck13"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="13" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch14" Padding="5,0,0,0" Grid.Row="14" Text="Own max. level Infinity Injector." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch14" Source="AchIcons/Diamond2Rank.png" Grid.Column="2" Grid.Row="14" Height="40" Visibility="Collapsed" />
+                <Image x:Name="imgCheck14"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="14" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch15" Padding="5,0,0,0" Grid.Row="15" Text="Unlock all upgrades." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch15" Source="AchIcons/Diamond3Rank.png" Grid.Column="2" Grid.Row="15" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck15"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="15" Height="40" Visibility="Collapsed" />
+
+                <TextBlock x:Name="txtAch16" Padding="5,0,0,0" Grid.Row="16" Text="More than 15min playtime." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch16" Source="AchIcons/Ascendant1Rank.png" Grid.Column="2" Grid.Row="16" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck16"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="16" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch17" Padding="5,0,0,0" Grid.Row="17" Text="More than 30min playtime." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch17" Source="AchIcons/Ascendant2Rank.png" Grid.Column="2" Grid.Row="17" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck17"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="17" Height="40" Visibility="Collapsed" />
+                <TextBlock x:Name="txtAch18" Padding="5,0,0,0" Grid.Row="18" Text="More than 1 hour of playtime." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch18" Source="AchIcons/Ascendant3Rank.png" Grid.Column="2" Grid.Row="18" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck18"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="18" Height="40" Visibility="Collapsed" />
+
+                <TextBlock x:Name="txtAch19" Padding="5,0,0,0" Grid.Row="19" Text="Unlocked everything from the bonus shop." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch19" Source="AchIcons/Immortal3Rank.png" Grid.Column="2" Grid.Row="19" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck19"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="19" Height="40" Visibility="Collapsed"/>
+
+                <TextBlock x:Name="txtAch20" Padding="5,0,0,0" Grid.Row="20" Text="Found and bought the easter egg." Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Visibility="Collapsed"/>
+                <Image x:Name="imgAch20" Source="AchIcons/RadiantRank.png" Grid.Column="2" Grid.Row="20" Height="40" Visibility="Collapsed"/>
+                <Image x:Name="imgCheck20"  Source="AchIcons/CheckmarkImage.png" Grid.Column="1" Grid.Row="20" Height="40" Visibility="Collapsed" />
+
+                <Border Grid.Row="0" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,5"/>
+                <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="2" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="3" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="4" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="5" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="7" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="8" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="9" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="10" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="11" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="12" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="13" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="14" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="15" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="16" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="17" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="18" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="19" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+                <Border Grid.Row="20" Grid.ColumnSpan="3" BorderBrush="White" BorderThickness="0,0,0,1"/>
+            </Grid>
+        </ScrollViewer>
+
+
+        <Button x:Name="btnSecret" Content="Secret shop" Grid.Row="0" Grid.Column="0" Height="Auto" Width="Auto" FontSize="20" Background="Black" Foreground="#FFF1E90D" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Visible" Click="btnSecret_Click">
+            <Button.ToolTip>
+                <ToolTip>
+                    Click here to go to the bonus store.
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+
 
         <Button x:Name="upgrade1" Grid.Row="1" Height="Auto" Click="Upgrade1_Click" Width="Auto" Visibility="Collapsed">
             <Grid>
@@ -198,11 +348,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW1" Source="image/newupgrade1.jpg" Width="Auto" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon1" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed"  Grid.Column="0" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level2" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level3" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed"  Grid.Column="2" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level4" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon1Level5" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="10,96,9,10"/>
+                        <Image x:Name="pictureIcon1" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed"  Grid.Column="0" Margin="5,96,34,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon1Level2" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="5,96,34,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon1Level3" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed"  Grid.Column="2" Margin="6,96,33,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon1Level4" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="6,96,33,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon1Level5" Source="image/icon1.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="5,96,0,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -213,11 +363,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW2" Source="image/upgrade2.jpg" Width="Auto" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon2" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon2Level2" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,111,10,10"/>
-                        <Image x:Name="pictureIcon2Level3" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon2Level4" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,111,10,10" />
-                        <Image x:Name="pictureIcon2Level5" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,111,10,10" />
+                        <Image x:Name="pictureIcon2" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="9,111,30,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon2Level2" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="7,111,32,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon2Level3" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="5,111,34,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon2Level4" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="5,111,34,10" Grid.ColumnSpan="2" />
+                        <Image x:Name="pictureIcon2Level5" Source="image/icon2.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="6,111,-1,10" />
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -228,11 +378,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW3" Source="image/newupgrade3.png" Width="Auto" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon3" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Margin="8,96,10,10" Grid.Column="0" />
-                        <Image x:Name="pictureIcon3Level2" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10" />
-                        <Image x:Name="pictureIcon3Level3" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon3Level4" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon3Level5" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureIcon3" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Margin="5,96,34,10" Grid.Column="0" Grid.ColumnSpan="2" />
+                        <Image x:Name="pictureIcon3Level2" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="4,96,0,10" />
+                        <Image x:Name="pictureIcon3Level3" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="5,96,34,10" Grid.ColumnSpan="2" />
+                        <Image x:Name="pictureIcon3Level4" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="5,96,34,10" Grid.ColumnSpan="2" />
+                        <Image x:Name="pictureIcon3Level5" Source="image/icon3.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="5,96,0,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -243,11 +393,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW4" Source="image/upgrade4.png" Width="Auto" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon4" Source="image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon4Level2" Source="image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10" />
-                        <Image x:Name="pictureIcon4Level3" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,96,10,10" />
-                        <Image x:Name="pictureIcon4Level4" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon4Level5" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureIcon4" Source="image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="5,96,34,10" Grid.ColumnSpan="2" />
+                        <Image x:Name="pictureIcon4Level2" Source="image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="4,96,0,10" />
+                        <Image x:Name="pictureIcon4Level3" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="5,96,34,10" Grid.ColumnSpan="2" />
+                        <Image x:Name="pictureIcon4Level4" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="4,96,0,10"/>
+                        <Image x:Name="pictureIcon4Level5" Source="/image/icon4.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="5,96,0,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -258,11 +408,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW5" Source="image/upgrade5.jpg" Width="Auto" Grid.Row="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon5" Source="image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level2" Source="image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level3" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level4" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,96,10,10"/>
-                        <Image x:Name="pictureIcon5Level5" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,96,10,10"/>
+                        <Image x:Name="pictureIcon5" Source="image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="5,96,34,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon5Level2" Source="image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="5,96,34,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon5Level3" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="6,96,33,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon5Level4" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="4,96,0,10"/>
+                        <Image x:Name="pictureIcon5Level5" Source="/image/icon5.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="5,96,0,10"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -273,11 +423,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW6" Source="image/upgrade6.jpg" Width="Auto" Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon6" Source="image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level2" Source="image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level3" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level4" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon6Level5" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,111,10,10" />
+                        <Image x:Name="pictureIcon6" Source="image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,38,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon6Level2" Source="image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="8,111,38,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon6Level3" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="5,111,3,10"/>
+                        <Image x:Name="pictureIcon6Level4" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="4,111,4,10"/>
+                        <Image x:Name="pictureIcon6Level5" Source="/image/icon6.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="4,111,4,10" />
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -288,11 +438,11 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="pictureSCRLVW7" Source="image/upgrade7.jpg" Width="Auto" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Visibility="Collapsed" Grid.ColumnSpan="5"/>
-                        <Image x:Name="pictureIcon7" Source="image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level2" Source="image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="9,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level3" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level4" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="8,111,10,10"/>
-                        <Image x:Name="pictureIcon7Level5" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="9,111,10,10" />
+                        <Image x:Name="pictureIcon7" Source="image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="0" Margin="8,111,38,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon7Level2" Source="image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="1" Margin="8,111,38,10" Grid.ColumnSpan="2"/>
+                        <Image x:Name="pictureIcon7Level3" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="2" Margin="5,111,3,10"/>
+                        <Image x:Name="pictureIcon7Level4" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="3" Margin="4,111,4,10"/>
+                        <Image x:Name="pictureIcon7Level5" Source="/image/icon7.png" Height="30" Width="30" Visibility="Collapsed" Grid.Column="4" Margin="4,111,4,10" />
                     </Grid>
                 </StackPanel>
             </Grid>
@@ -300,8 +450,38 @@
 
         <Label x:Name="lblPassiefInkomen" Content="Passive Income:" Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF020100" VerticalContentAlignment="Center" FontSize="24" Foreground="#FFFDD30B"/>
         <Label x:Name="lblAantalGespendeerd" Content="Clicks spent:" Grid.Column="2"  Grid.Row="1" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF020100" VerticalContentAlignment="Center" FontSize="18" Foreground="#FFFDD30B"/>
-        <Label x:Name="lblTijd" Grid.Column="2" Grid.Row="2" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF2559AD" VerticalContentAlignment="Center" FontSize="24"/>
 
+        <Grid Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblTijd" Grid.Row="0" Grid.Column="0" Width="Auto" Height="Auto" Background="#FF2559AD" VerticalContentAlignment="Center" FontSize="24"/>
+            <Label Grid.Row="0" Grid.Column="1" Width="Auto" Height="Auto" Background="#FF2559AD"/>
+            <Button x:Name="arrowButton" Grid.Row="0" Grid.Column="1" Width="Auto" Click="arrowButton_Click" Foreground="#FFFDD30B" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.ToolTip>
+                    <ToolTip>
+                        This is the Achievements button. Click here to view achievements.
+                    </ToolTip>
+                </Button.ToolTip>
+                <Button.Background>
+                    <ImageBrush ImageSource="AchIcons/AchBtnImg.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
 
     </Grid>
 </Window>

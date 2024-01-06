@@ -144,6 +144,28 @@
     <Resource Include="imageBonus\upgr6Bonus.jpeg" />
     <Resource Include="imageBonus\E46Graph.png" />
     <Resource Include="imageBonus\E46Click.png" />
+    <Resource Include="AchIcons\Ascendant1Rank.png" />
+    <Resource Include="AchIcons\Ascendant2Rank.png" />
+    <Resource Include="AchIcons\Ascendant3Rank.png" />
+    <Resource Include="AchIcons\Diamond1Rank.png" />
+    <Resource Include="AchIcons\Diamond2Rank.png" />
+    <Resource Include="AchIcons\Diamond3Rank.png" />
+    <Resource Include="AchIcons\Gold1Rank.png" />
+    <Resource Include="AchIcons\Gold2Rank.png" />
+    <Resource Include="AchIcons\Gold3Rank.png" />
+    <Resource Include="AchIcons\Immortal3Rank.png" />
+    <Resource Include="AchIcons\Iron1Rank.png" />
+    <Resource Include="AchIcons\Iron2Rank.png" />
+    <Resource Include="AchIcons\Iron3Rank.png" />
+    <Resource Include="AchIcons\Platinum1Rank.png" />
+    <Resource Include="AchIcons\Platinum2Rank.png" />
+    <Resource Include="AchIcons\Platinum3Rank.png" />
+    <Resource Include="AchIcons\RadiantRank.png" />
+    <Resource Include="AchIcons\Silver1Rank.png" />
+    <Resource Include="AchIcons\Silver2Rank.png" />
+    <Resource Include="AchIcons\Silver3Rank.png" />
+    <Resource Include="AchIcons\AchBtnImg.png" />
+    <Resource Include="AchIcons\CheckmarkImage.png" />
     <Content Include="sounds\carRev.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -154,6 +176,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="imageAch\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

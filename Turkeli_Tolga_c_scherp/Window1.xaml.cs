@@ -23,40 +23,80 @@ namespace Turkeli_Tolga_c_scherp
     public partial class Window1 : Window
     {
 
-        double upgrade1PrijsSecret = 11000;
-        double upgrade2PrijsSecret = 55000;
-        double upgrade3PrijsSecret = 550000;
-        double upgrade4PrijsSecret = 55000000;
-        double upgrade5PrijsSecret = 5500000000;
-        double upgrade6PrijsSecret = 550000000000;
+        double upgrade1PrijsBonus = 11000;
+        double upgrade2PrijsBonus = 55000;
+        double upgrade3PrijsBonus = 550000;
+        double upgrade4PrijsBonus = 55000000;
+        double upgrade5PrijsBonus = 5500000000;
+        double upgrade6PrijsBonus = 550000000000;
+
+        double upgrade1InkomenBonus = 0;
+        double upgrade2InkomenBonus = 0;
+        double upgrade3InkomenBonus = 0;
+        double upgrade4InkomenBonus = 0;
+        double upgrade5InkomenBonus = 0;
+        double upgrade6InkomenBonus = 0;
+
+        double levelUpgradeBonus = 0;
 
        
         public Window1()
         {
             InitializeComponent();
 
-            DispatcherTimer updateSchermSecret = new DispatcherTimer();
-            updateSchermSecret.Interval = TimeSpan.FromSeconds(1);
-            updateSchermSecret.Tick += updateSchermSecret_Tick;
-            updateSchermSecret.Start();
+            DispatcherTimer updateSchermBonus = new DispatcherTimer();
+            updateSchermBonus.Interval = TimeSpan.FromSeconds(1);
+            updateSchermBonus.Tick += updateSchermBonus_Tick;
+            updateSchermBonus.Start();
         }
 
-        private void prijs (Label prijzen, double upgradePrijsSecret)
+        private void prijs (Label prijzen, double upgradePrijsBonus)
         {
-            prijzen.Content = "Price: " + (upgradePrijsSecret);
+            prijzen.Content = "Price: " + (upgradePrijsBonus);
         }
 
-        private void updateSchermSecret_Tick(object sender, EventArgs e) 
+        private void updateSchermBonus_Tick(object sender, EventArgs e) 
         {
-            prijs(lblPrijsSecret1, upgrade1PrijsSecret);
-            prijs(lblPrijsSecret2, upgrade2PrijsSecret);
-            prijs(lblPrijsSecret3, upgrade3PrijsSecret);
-            prijs(lblPrijsSecret4, upgrade4PrijsSecret);
-            prijs(lblPrijsSecret5, upgrade5PrijsSecret);
-            prijs(lblPrijsSecret6, upgrade6PrijsSecret);
+            prijs(lblPrijsBonus1, upgrade1PrijsBonus);
+            prijs(lblPrijsBonus2, upgrade2PrijsBonus);
+            prijs(lblPrijsBonus3, upgrade3PrijsBonus);
+            prijs(lblPrijsBonus4, upgrade4PrijsBonus);
+            prijs(lblPrijsBonus5, upgrade5PrijsBonus);
+            prijs(lblPrijsBonus6, upgrade6PrijsBonus);
         }
 
 
+       
+
+        private void upgrade1Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void upgrade2Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void upgrade3Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void upgrade4Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void upgrade5Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void upgrade6Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }
