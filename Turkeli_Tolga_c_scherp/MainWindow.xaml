@@ -448,7 +448,7 @@
             </Grid>
         </ScrollViewer>
 
-        <Label x:Name="lblPassiefInkomen" Content="Passive Income:" Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF020100" VerticalContentAlignment="Center" FontSize="24" Foreground="#FFFDD30B"/>
+        <Label x:Name="lblPassiefInkomen" Content="Passive Income:" Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF020100" VerticalContentAlignment="Center" FontSize="24"/>
         <Label x:Name="lblAantalGespendeerd" Content="Clicks spent:" Grid.Column="2"  Grid.Row="1" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF020100" VerticalContentAlignment="Center" FontSize="18" Foreground="#FFFDD30B"/>
 
         <Grid Grid.Column="3">
@@ -457,7 +457,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="lblTijd" Grid.Row="0" Grid.Column="0" Width="Auto" Height="Auto" Background="#FF2559AD" VerticalContentAlignment="Center" FontSize="24"/>
+            <Label x:Name="lblTijd" Grid.Row="0" Grid.Column="0" Width="Auto" Height="Auto" Background="#FF2559AD" VerticalContentAlignment="Center" FontSize="18"/>
             <Label Grid.Row="0" Grid.Column="1" Width="Auto" Height="Auto" Background="#FF2559AD"/>
             <Button x:Name="arrowButton" Grid.Row="0" Grid.Column="1" Width="Auto" Click="arrowButton_Click" Foreground="#FFFDD30B" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">
                 <Button.Effect>
@@ -482,6 +482,9 @@
                 </Button.Style>
             </Button>
         </Grid>
-
     </Grid>
+
+
+
+    
 </Window>

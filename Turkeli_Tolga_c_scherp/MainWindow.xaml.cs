@@ -33,11 +33,11 @@ namespace Turkeli_Tolga_c_scherp
     {
 
         //timer
-        private int aantalSeconden = 890;
+        private int aantalSeconden = 0;
 
         //clicks
-        double clicks1 = 10000000000;
-        double totaalClicksAlles = 1000000000;
+        double clicks1 = 100000000;
+        double totaalClicksAlles = 100000000;
 
         //upgrades
         private bool upgrade1Gekocht = false;
@@ -143,12 +143,17 @@ namespace Turkeli_Tolga_c_scherp
 
             // geluid
             dingSound = new SoundPlayer("/");
+
         }
 
         private void TimerUpdateScherm_Tick(object sender, EventArgs e)
         {
+            TimeSpan time = TimeSpan.FromSeconds(aantalSeconden);
+            DateTime dateTime = DateTime.MinValue.Add(time);
+            string tijdAlsString = dateTime.ToString("HH:mm:ss");
 
-            lblTijd.Content = $"Tijd: " + DateTime.Now.ToString("HH:mm:ss");
+            lblPassiefInkomen.Content = "Passive income:" + VeranderGroteNummer(passiefinkomen) + "/s";
+            lblTijd.Content = $"Tijd: " + tijdAlsString;
             lblClicks.Content = $"Clicks: {VeranderGroteNummer(Math.Floor(clicks1))}";
             UpdateWindowTitle();
 
@@ -159,6 +164,25 @@ namespace Turkeli_Tolga_c_scherp
             UpdateIsEnabled(upgrade5, upgrade5Prijs, levelUpgrade5);
             UpdateIsEnabled(upgrade6, upgrade6Prijs, levelUpgrade6);
             UpdateIsEnabled(upgrade7, upgrade7Prijs, levelUpgrade7);
+
+            if (passiefinkomen < 20000)
+            {
+                lblPassiefInkomen.Foreground = Brushes.Red;
+            }
+            else if (passiefinkomen < 30000)
+            {
+                lblPassiefInkomen.Foreground = Brushes.Yellow;
+            }
+            else if (passiefinkomen < 60000)
+            {
+                lblPassiefInkomen.Foreground = Brushes.Orange;
+            }
+            else
+            {
+                lblPassiefInkomen.Foreground = Brushes.Green;
+            }
+
+
 
             //veranderen van auto image, als je bepaald aantal clicks hebt word de image veranderd.
             if (clicks1 >= 100000 && clicks1 < 999999 && !Auto1Unlocked)
@@ -378,7 +402,7 @@ namespace Turkeli_Tolga_c_scherp
             if (levelUpgrade == 5 && !geluidVoorLevel5)
             {
                 PlayHappySound();
-                MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get 5x more passive income from this upgrade!", "A little gift :)");
+                MessageBox.Show("Congrats! you reached the maximum level of this upgrade!\nHereby i gift you a boost so you will get tripple as much passive income from this upgrade!", "A little gift :)");
                 geluidVoorLevel5 = true;
             }
 
@@ -501,7 +525,6 @@ namespace Turkeli_Tolga_c_scherp
             {
                 UpgradePassiefInkomen(Upgrade7Inkomen, levelUpgrade7);
             }
-            lblPassiefInkomen.Content = "Passive income:" + VeranderGroteNummer(passiefinkomen) + "/s";
 
             if (aantalSeconden >= 900)
             {
@@ -730,11 +753,12 @@ namespace Turkeli_Tolga_c_scherp
 
         private void btnSecret_Click(object sender, RoutedEventArgs e)
         {
-            Window1 windowSecret = new Window1();
+            Window1 windowSecret = new Window1(clicks1);
             windowSecret.Show();
+
         }
 
-        private void arrowButton_Click(object sender, RoutedEventArgs e)
+        private void arrowButton_Click(object sender, RoutedEventArgs e) //achievements knop
         {
             if (achievementsPanel.Visibility == Visibility.Collapsed)
             {
@@ -750,7 +774,7 @@ namespace Turkeli_Tolga_c_scherp
 
         }
 
-        private void CheckMaxLevelUpgradesAch()
+        private void CheckMaxLevelUpgradesAch() // achievements, checkt of max level van de upgrades zijn bereikt
         {
             if (levelUpgrade1 == 5)
             {
@@ -766,7 +790,7 @@ namespace Turkeli_Tolga_c_scherp
             }
         }
 
-        private void UnlockAllUpgradesAch()
+        private void UnlockAllUpgradesAch() // checkt of alle upgrades zijn unlocked
         {
             if (upgrade1Gekocht && upgrade2Gekocht && upgrade3Gekocht && upgrade4Gekocht && upgrade5Gekocht && upgrade6Gekocht && upgrade7Gekocht)
             {
@@ -782,7 +806,7 @@ namespace Turkeli_Tolga_c_scherp
         private void AchievementsActies()
         {
            
-            if (achMaxLvlHyper && !IsAchMaxLvlHyperDone)
+            if (achMaxLvlHyper && !IsAchMaxLvlHyperDone) //checkt of achMaxLvlHyper = true & !IsAchMaxLvlHyperDone, dit betekend dat het false is dus het is niet gedaan dit heb ik gedaan zodat ik niet bij elke tick een messagebox krijg.
             {
                 IsAchMaxLvlHyperDone = true;
                 MessageBox.Show("Congratulations! Achievement unlocked: Maximum level Hyper Drive!");

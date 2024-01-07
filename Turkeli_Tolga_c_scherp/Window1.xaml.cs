@@ -48,6 +48,8 @@ namespace Turkeli_Tolga_c_scherp
             updateSchermBonus.Interval = TimeSpan.FromSeconds(1);
             updateSchermBonus.Tick += updateSchermBonus_Tick;
             updateSchermBonus.Start();
+
+            
         }
 
         private void prijs (Label prijzen, double upgradePrijsBonus)
@@ -70,7 +72,7 @@ namespace Turkeli_Tolga_c_scherp
 
         private void upgrade1Bonus_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void upgrade2Bonus_Click(object sender, RoutedEventArgs e)
@@ -94,6 +96,11 @@ namespace Turkeli_Tolga_c_scherp
         }
 
         private void upgrade6Bonus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public Window1(double clicks1)
         {
 
         }

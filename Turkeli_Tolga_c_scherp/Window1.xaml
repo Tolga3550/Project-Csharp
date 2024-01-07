@@ -692,7 +692,7 @@
 
         
 
-        <Label Grid.Column="1" Grid.Row="0" Content="Pick carefully :)" FontSize="20" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF1E90D"/>
+        <Label x:Name="lblPick" Grid.Column="1" Grid.Row="0" Content="Pick carefully :)" FontSize="20" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF1E90D"/>
 
         <Image x:Name="BugattiClickImage" Source="imageBonus/BugattiClick.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill" Grid.Column="1" Grid.Row="5" Grid.RowSpan="5" Visibility="Collapsed"/>
         <Image x:Name="BugattiGraph" Source="imageBonus/BugattiGraph.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Visibility="Collapsed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
